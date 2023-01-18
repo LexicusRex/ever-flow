@@ -1,0 +1,125 @@
+html {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    flex-direction: row;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    /* Position absolute here fills the page */
+    position: absolute;
+}
+
+.left_view {
+    width: 50%;
+}
+.left_view img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+}
+
+.right_view {
+    width: 50%;
+    text-align: center;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right_view img {
+    width: 30%;
+}
+.sign_in {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 520;
+    font-size: 4.5rem;
+    margin: 5rem;
+}
+
+.welcome {
+    font-family: "Poppins";
+    font-style: normal;
+    color: #6c6c6c;
+    font-size: 2rem;
+    margin-top: -4.5rem;
+    margin-bottom: 4rem;
+}
+
+.email {
+    border: none;
+    border-bottom: 2px solid #d8d8d8;
+    width: 50rem;
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+}
+
+.password {
+    border: none;
+    border-bottom: 2px solid #d8d8d8;
+    width: 50rem;
+    font-size: 1.6rem;
+    margin-top: 6rem;
+}
+
+.password_attri {
+    margin-top: 1rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    width: 51rem;
+}
+
+.remember_me {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    justify-content: left;
+}
+
+.remember_me_word {
+    padding-left: 0.5rem;
+}
+
+input[type="checkbox"] {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.forgot_pass {
+    font-size: 1.4rem;
+    color: #f06680;
+    text-align: right;
+}
+
+input:focus {
+    outline: none;
+}
+
+.login_button {
+    margin-top: 6rem;
+    width: 50rem;
+    height: 5rem;
+    background-color: #f06680;
+    border-radius: 1rem;
+    border: none;
+    height: 3.5rem;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.login_font {
+    font-style: normal;
+    font-weight: 500;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+}
