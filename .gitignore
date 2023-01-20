@@ -11,13 +11,6 @@ coverage
 # production
 build
 
-# pocketbase
-pb_migrations
-LICENSE.md
-pocketbase.exe
-*.db-shm
-*.db-wal
-
 # misc
 .DS_Store
 # .env.local
