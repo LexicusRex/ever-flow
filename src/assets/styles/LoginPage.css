@@ -1,125 +1,150 @@
-/* html {
-    font-size: 62.5%;
-} */
+:root {
+    --login-background-color: #ffffff;
+}
+
+html {
+    font-family: "Poppins";
+}
 
 .wrapper {
-    flex-direction: row;
-    display: inline-flex;
-    width: 100%;
-    height: 100%;
-    /* Position absolute here fills the page */
-    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.left_view {
-    width: 50%;
+.left-view {
+    width: 50vw;
+    height: 100vh;
 }
-.left_view img {
-    width: 100%;
-    height: 110%;
+
+.left-view img {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
     object-fit: cover;
 }
 
-.right_view {
-    width: 50%;
+.right-view {
+    width: 50vw;
+    height: 100vh;
+    padding: 15rem;
+    background-color: var(--login-background-color);
     text-align: center;
-    padding: 3rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-}
-
-.right_view img {
-    width: 30%;
-}
-.sign_in {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 520;
-    font-size: 4.5rem;
-    margin: 5rem;
-}
-
-.welcome {
-    font-family: "Poppins";
-    font-style: normal;
-    color: #6c6c6c;
-    font-size: 2rem;
-    margin-top: -4.5rem;
-    margin-bottom: 4rem;
-}
-
-.email {
-    border: none;
-    border-bottom: 2px solid #d8d8d8;
-    width: 50rem;
-    font-size: 1.6rem;
-    margin-top: 2.5rem;
-}
-
-.password {
-    border: none;
-    border-bottom: 2px solid #d8d8d8;
-    width: 50rem;
-    font-size: 1.6rem;
-    margin-top: 6rem;
-}
-
-.password_attri {
-    margin-top: 1rem;
-    display: grid;
-    align-items: center;
     justify-content: center;
-    grid-template-columns: 1fr 1fr;
-    width: 51rem;
+    align-items: center;
 }
 
-.remember_me {
+#sign-in-title {
+    font-size: 4.5rem;
+    margin-top: 3.6rem;
+}
+
+#welcome-title {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #6c6c6c;
+    width: 100%;
+}
+
+form,
+#login-button {
+    max-width: 70vw;
+}
+
+#email,
+#password {
+    border: none;
+    border-bottom: 2px solid #d8d8d8;
+    outline: none;
+    color: #b4b4b4;
+    margin-top: 6rem;
+    font-size: 1.6rem;
+    background: transparent;
+    width: 100%;
+}
+
+#login-button {
+    font-size: 1.8rem;
+    width: 45rem;
+    height: 3.6rem;
+    border-radius: 10px;
+    color: white;
+    background-color: #f06680;
+    border: none;
+}
+
+#login-button:hover {
+    background-color: #f0667fc7;
+}
+
+#password-action-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.password-action-btn {
+    line-height: 2.1rem;
+    margin-top: 24px;
+    font-size: 1.4rem;
+}
+
+#remember-me-option {
     display: flex;
     align-items: center;
-    font-size: 1.4rem;
-    justify-content: left;
+    justify-content: center;
 }
 
-.remember_me_word {
-    padding-left: 0.5rem;
-}
-
-input[type="checkbox"] {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-}
-
-.forgot_pass {
-    font-size: 1.4rem;
-    color: #f06680;
+#forgot-password-link {
     text-align: right;
 }
 
-input:focus {
-    outline: none;
+.auth-link {
+    color: #f06680;
 }
 
-.login_button {
+#remember-me-label {
+    display: flex;
+    align-items: center;
+    color: #776e6e;
+}
+
+#remember-me-checkbox {
+    display: inline-block;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: 0.625rem;
+}
+
+[type="checkbox"] {
+    vertical-align: middle;
+}
+
+#login-button {
     margin-top: 6rem;
-    width: 50rem;
-    height: 5rem;
-    background-color: #f06680;
-    border-radius: 1rem;
-    border: none;
-    height: 3.5rem;
-    font-size: 2.5rem;
-    color: white;
-    cursor: pointer;
 }
 
-.login_font {
-    font-style: normal;
-    font-weight: 500;
-    height: 50px;
-    font-size: 18px;
-    color: white;
+#sign-up-prompt {
+    margin-top: 24px;
+    color: #776e6e;
+    font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .left-view {
+        display: none;
+    }
+    .right-view {
+        width: 100vw;
+        padding: 5rem;
+    }
 }
