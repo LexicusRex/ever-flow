@@ -2,23 +2,19 @@
     --login-background-color: #ffffff;
 }
 
-html {
-    font-family: "Poppins";
-}
-
-.wrapper {
+.signup-wrapper {
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.left-view {
+.signup-left-view {
     width: 50vw;
     height: 100vh;
 }
 
-.left-view img {
+.signup-left-view img {
     width: 50vw;
     height: 100vh;
     position: absolute;
@@ -27,7 +23,7 @@ html {
     object-fit: cover;
 }
 
-.right-view {
+.signup-right-view {
     width: 50vw;
     height: 100vh;
     padding: 0 7rem;
@@ -39,22 +35,23 @@ html {
     align-items: center;
 }
 
-#create-account-text {
+#signup-create-account-text {
     font-size: 4.5rem;
     font-weight: 400;
     margin-top: 2rem;
 }
 
-#welcome-title {
+#signup-signup-welcome {
     font-size: 2rem;
     font-weight: 400;
     color: #6C6C6C;
     margin-bottom: 7rem;
 }
 
-input {
+#signup-name-input input, #signup-org-pass-fields input {
     border: none;
     border-bottom: 2px solid #d8d8d8;
+    font-size: 1.6rem;      
 }
 
 ::placeholder {
@@ -62,17 +59,14 @@ input {
     font-weight: 400;
 }
 
-#first-name, #last-name {
-    font-size: 1.6rem;    
-}
 
-#name-input {
+#signup-name-input {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 7rem;
 }
 
-#org-pass-fields {
+#signup-org-pass-fields {
     display: grid;
     grid-template-rows: 1fr 1fr;
     margin-top: 5rem;
@@ -80,7 +74,7 @@ input {
     font-size: 1.6rem;
 }
 
-#pass-restrict {
+#signup-pass-restrict {
     text-align: left;
     margin-left: 1rem;
     font-size: 1.2rem;
@@ -88,7 +82,7 @@ input {
     color: #776E6E;
 }
 
-#pass-conditions {
+#signup-pass-conditions {
     text-align: left;
     font-size: 1rem;
     font-weight: 400;
@@ -97,29 +91,29 @@ input {
     margin-bottom: 4.2rem;
 }
 
-#sign-up-confirmation {
+#signup-sign-up-confirmation {
     display: flex;
     align-self: flex-start;
 }
 
-#toc-checkbox {
+#signup-toc-checkbox {
     vertical-align: middle;
     margin-right: 0.625rem;
 }
 
-#terms-and-conditions {
+#signup-terms-and-conditions {
     color: #776E6E;
     font-size: 1.4rem;
     font-weight: 400;
 }
 
-#hyper-text {
+#signup-hyper-text {
     color: #F06680;
     font-size: 1.4rem;
     font-weight: 400;
 }
 
-#sign-up-button {
+#signup-sign-up-button {
     color: white;
     background: #F06680;
     border-radius: 1rem;
@@ -132,13 +126,27 @@ input {
     font-weight: 500;
 }
 
-#account-exist {
+#signup-account-exist {
     color: #776E6E;
     font-size: 1.4rem;
     font-weight: 400;
 }
 
-#sign-in-text {
+#signup-sign-in-text {
     font-weight: 500;
     color: #F06680;
+}
+
+@media only screen and (max-width: 1000px) {
+    .signup-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .signup-left-view {
+        display: none;
+    }
+    .signup-right-view {
+        width: 100vw;
+        padding: 5rem;
+    }
 }

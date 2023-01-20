@@ -7,32 +7,35 @@ import React, { useEffect, useState } from "react";
 
 function SignupPage() {
     return (
-        <div className="wrapper">
-            <div className="left-view">
-                <img className="login-img" src={left_image} alt="" />
+        <div className="signup-wrapper">
+            <div className="signup-left-view">
+                <img className="signup-login-img" src={left_image} alt="" />
             </div>
 
-            <div className="right-view">
+            <div className="signup-right-view">
                 <img src={logo} alt="logo" />
-                <h1 id="create-account-text">Create an Account</h1>
-                <h2 id="welcome-title">
+                <h1 id="signup-create-account-text">Create an Account</h1>
+                <h2 id="signup-signup-welcome">
                     Welcome Back! Please enter your details below to sign up.
                 </h2>
 
                 <form>
-                    <div id="name-input">
+                    <div id="signup-name-input">
                         <input
                             placeholder="First Name"
-                            id='first-name'
+                            id='signup-first-name'
+                            type='text'
                         />
                         <input
                             placeholder="Last Name"
-                            id='last-name'
+                            id='signup-last-name'
+                            type='text'
                         />
                     </div>
-                    <div id="org-pass-fields">
+                    <div id="signup-org-pass-fields">
                         <input
                             placeholder="Organisation Email"
+                            type='email'
                         />
                         <input
                             placeholder="Password"
@@ -41,8 +44,8 @@ function SignupPage() {
                     </div>
                     {/* Password conditions: */}
                     <div>
-                        <h2 id='pass-restrict'>Password must contain at least:</h2>
-                        <ul id='pass-conditions'>
+                        <h2 id='signup-pass-restrict'>Password must contain at least:</h2>
+                        <ul id='signup-pass-conditions'>
                             <li>8 Characters</li>
                             <li>1 Uppercase Letter</li>
                             <li>1 Lowercase Letter</li>
@@ -50,17 +53,17 @@ function SignupPage() {
                         </ul>
                     </div>
 
-                    <div id='sign-up-confirmation'>
-                        <label htmlFor="toc-checkbox" id="terms-and-conditions">
-                            <input type='checkbox' id="toc-checkbox" />   
-                            By signing up, you agree with our <a id="hyper-text" href="url">terms and conditions</a>
+                    <div id='signup-sign-up-confirmation'>
+                        <label htmlFor="toc-checkbox" id="signup-terms-and-conditions">
+                            <input type='checkbox' id="signup-toc-checkbox" />   
+                            By signing up, you agree with our <a id="signup-hyper-text" href="url">terms and conditions</a>
                         </label>
                     </div>
                 </form>
-                <button id="sign-up-button">Sign Up</button>
-                <h1 id="account-exist">
+                <button id="signup-sign-up-button">Sign Up</button>
+                <h1 id="signup-account-exist">
                     Already have an account?&nbsp;
-                    <a id="sign-in-text" href="">Sign in</a>
+                    <a id="signup-sign-in-text" href="">Sign in</a>
                 </h1>
             </div>
         </div>
