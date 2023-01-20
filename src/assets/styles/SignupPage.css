@@ -1,0 +1,157 @@
+:root {
+    --login-background-color: #ffffff;
+}
+
+.signup-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.signup-left-view {
+    width: 50vw;
+    height: 100vh;
+}
+
+.signup-left-view img {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.signup-right-view {
+    width: 50vw;
+    height: 100vh;
+    padding: 0 7rem;
+    background-color: var(--login-background-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-create-account-text {
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin-top: 2rem;
+}
+
+#signup-signup-welcome {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #6C6C6C;
+    margin-bottom: 7rem;
+}
+
+#signup-name-input input, #signup-org-pass-fields input {
+    border: none;
+    border-bottom: 2px solid #d8d8d8;
+    font-size: 1.6rem;      
+}
+
+::placeholder {
+    color: #B4B4B4;
+    font-weight: 400;
+}
+
+
+#signup-name-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7rem;
+}
+
+#signup-org-pass-fields {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 5rem;
+    gap: 5rem;
+    font-size: 1.6rem;
+}
+
+#signup-pass-restrict {
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #776E6E;
+}
+
+#signup-pass-conditions {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #776E6E;
+    margin-left: -0.8rem;
+    margin-bottom: 4.2rem;
+}
+
+#signup-sign-up-confirmation {
+    display: flex;
+    align-self: flex-start;
+}
+
+#signup-toc-checkbox {
+    vertical-align: middle;
+    margin-right: 0.625rem;
+}
+
+#signup-terms-and-conditions {
+    color: #776E6E;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+#signup-hyper-text {
+    color: #F06680;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+#signup-sign-up-button {
+    color: white;
+    background: #F06680;
+    border-radius: 1rem;
+    border: none;
+    width: 45rem;
+    height: 3.6rem;
+    margin-top: 2.8rem;
+    margin-bottom: 2.4rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+#signup-account-exist {
+    color: #776E6E;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+#signup-sign-in-text {
+    font-weight: 500;
+    color: #F06680;
+}
+
+@media only screen and (max-width: 1000px) {
+    #signup-name-input {    
+        display: flex;
+        justify-content: center;
+    }
+    .signup-wrapper {
+        display: flex;
+        justify-content: center;
+
+    }
+    .signup-left-view {
+        display: none;
+    }
+    .signup-right-view {
+        width: 100vw;
+        padding: 5rem;
+    }
+}
