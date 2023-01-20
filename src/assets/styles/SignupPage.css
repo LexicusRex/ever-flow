@@ -138,9 +138,14 @@
 }
 
 @media only screen and (max-width: 1000px) {
+    #signup-name-input {    
+        display: flex;
+        justify-content: center;
+    }
     .signup-wrapper {
         display: flex;
         justify-content: center;
+
     }
     .signup-left-view {
         display: none;
