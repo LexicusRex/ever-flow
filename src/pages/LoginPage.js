@@ -33,14 +33,14 @@ function LoginPage() {
     }
 
     return (
-        <div className="wrapper">
+        <div className="login-wrapper">
             <div className="left-view">
                 <img className="login-img" src={login_image_2} alt="" />
             </div>
-            <div className="right-view">
+            <div className="flex flex-col justify-center items-center text-center">
                 <img src={logo} alt="logo" />
-                <h1 id="sign-in-title">Sign In</h1>
-                <h2 id="welcome-title">Welcome Back!</h2>
+                <h1 id="login-title">Sign In</h1>
+                <h2 id="login-welcome">Welcome Back!</h2>
                 {/* {isLoading && <p>Loading...</p>} */}
                 {isError && (
                     <p
@@ -52,7 +52,7 @@ function LoginPage() {
                         Invalid Email or Password. Please try again.
                     </p>
                 )}
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
                     <input
                         placeholder="Email"
                         id="email"
@@ -64,23 +64,23 @@ function LoginPage() {
                         type="password"
                         {...register("password")}
                     />
-                    <div id="password-action-container">
+                    <div id="login-password-action-container">
                         <label
-                            className="password-action-btn"
+                            className="login-password-action-btn"
                             id="remember-me-label"
                             htmlFor="remember-me-checkbox">
                             <input
                                 type="checkbox"
                                 name="is-remember-me"
                                 id="remember-me-checkbox"
-                                className="input-checkbox"
+                                className="login-input-checkbox"
                             />
                             Remember me
                         </label>
                         <a
                             href=""
                             target="_blank"
-                            className="password-action-btn auth-link"
+                            className="login-password-action-btn auth-link"
                             id="forgot-password-link">
                             Forgot Password?
                         </a>

@@ -6,19 +6,19 @@ html {
     font-family: "Poppins";
 }
 
-.wrapper {
+.login-wrapper {
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.left-view {
+.login-wrapper .left-view {
     width: 50vw;
     height: 100vh;
 }
 
-.left-view img {
+.login-wrapper .left-view img {
     width: 50vw;
     height: 100vh;
     position: absolute;
@@ -27,24 +27,24 @@ html {
     object-fit: cover;
 }
 
-.right-view {
+.login-wrapper .right-view {
     width: 50vw;
     height: 100vh;
     padding: 15rem;
     background-color: var(--login-background-color);
-    text-align: center;
+    /*text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
-#sign-in-title {
+#login-title {
     font-size: 4.5rem;
     margin-top: 3.6rem;
 }
 
-#welcome-title {
+#login-welcome {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
     font-size: 2rem;
@@ -52,13 +52,13 @@ html {
     width: 100%;
 }
 
-form,
-#login-button {
+.login-form,
+.login-form #login-button {
     max-width: 70vw;
 }
 
-#email,
-#password {
+.login-form #email,
+.login-form #password {
     border: none;
     border-bottom: 2px solid #d8d8d8;
     outline: none;
@@ -69,7 +69,7 @@ form,
     width: 100%;
 }
 
-#login-button {
+.login-form #login-button {
     font-size: 1.8rem;
     width: 45rem;
     height: 3.6rem;
@@ -79,16 +79,16 @@ form,
     border: none;
 }
 
-#login-button:hover {
+.login-form #login-button:hover {
     background-color: #f0667fc7;
 }
 
-#password-action-container {
+#login-password-action-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.password-action-btn {
+.login-password-action-btn {
     line-height: 2.1rem;
     margin-top: 24px;
     font-size: 1.4rem;
@@ -119,6 +119,7 @@ form,
     height: 1.6rem;
     width: 1.6rem;
     margin-right: 0.625rem;
+    accent-color: #f06680;
 }
 
 [type="checkbox"] {
@@ -136,14 +137,14 @@ form,
 }
 
 @media only screen and (max-width: 1000px) {
-    .wrapper {
+    .login-wrapper {
         display: flex;
         justify-content: center;
     }
-    .left-view {
+    .login-wrapper .left-view {
         display: none;
     }
-    .right-view {
+    .login-wrapper .right-view {
         width: 100vw;
         padding: 5rem;
     }
