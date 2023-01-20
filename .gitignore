@@ -17,7 +17,6 @@ LICENSE.md
 pocketbase.exe
 *.db-shm
 *.db-wal
-logs.db
 
 # misc
 .DS_Store
