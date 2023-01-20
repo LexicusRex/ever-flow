@@ -13,7 +13,8 @@ build
 
 # pocketbase
 pb_migrations
-
+*.data_shm
+*.data_wal
 
 # misc
 .DS_Store
