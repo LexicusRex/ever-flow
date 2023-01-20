@@ -11,6 +11,11 @@ coverage
 # production
 build
 
+# pocketbase
+pb_migrations
+LICENSE.md
+pocketbase.exe
+
 # misc
 .DS_Store
 # .env.local
