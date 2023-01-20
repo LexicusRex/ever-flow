@@ -1,12 +1,144 @@
-.container {
+:root {
+    --login-background-color: #ffffff;
+}
+
+html {
+    font-family: "Poppins";
+}
+
+.wrapper {
     width: 100vw;
     height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left-view {
+    width: 50vw;
+    height: 100vh;
+}
+
+.left-view img {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.right-view {
+    width: 50vw;
+    height: 100vh;
+    padding: 0 7rem;
+    background-color: var(--login-background-color);
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+#create-account-text {
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin-top: 2rem;
+}
+
+#welcome-title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #6C6C6C;
+    margin-bottom: 7rem;
+}
+
 input {
-    width: 100%;
+    border: none;
+    border-bottom: 2px solid #d8d8d8;
+}
+
+::placeholder {
+    color: #B4B4B4;
+    font-weight: 400;
+}
+
+#first-name, #last-name {
+    font-size: 1.6rem;    
+}
+
+#name-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7rem;
+}
+
+#org-pass-fields {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 5rem;
+    gap: 5rem;
+    font-size: 1.6rem;
+}
+
+#pass-restrict {
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #776E6E;
+}
+
+#pass-conditions {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #776E6E;
+    margin-left: -0.8rem;
+    margin-bottom: 4.2rem;
+}
+
+#sign-up-confirmation {
+    display: flex;
+    align-self: flex-start;
+}
+
+#toc-checkbox {
+    vertical-align: middle;
+    margin-right: 0.625rem;
+}
+
+#terms-and-conditions {
+    color: #776E6E;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+#hyper-text {
+    color: #F06680;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+#sign-up-button {
+    color: white;
+    background: #F06680;
+    border-radius: 1rem;
+    border: none;
+    width: 45rem;
+    height: 3.6rem;
+    margin-top: 2.8rem;
+    margin-bottom: 2.4rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+#account-exist {
+    color: #776E6E;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+#sign-in-text {
+    font-weight: 500;
+    color: #F06680;
 }
