@@ -8,12 +8,16 @@
     /* Position absolute here fills the page */
     display: grid;
     grid-template-columns: 50% 50%;
+    overflow-y: hidden; 
+}
+
+.left_view {
+    height: 100%;
 }
 
 .left_view img {
     width: 100%;
-    height: 110%;
-    object-fit: cover;
+    height: 100%;
 }
 
 .right_view {
@@ -28,12 +32,17 @@
 .right_view img {
     width: 30%;
 }
+
 .sign_in {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 520;
     font-size: 4.5rem;
     margin: 5rem;
+}
+
+form {
+    max-width: 100%;
 }
 
 .welcome {
@@ -119,14 +128,11 @@ input:focus {
     color: white;
 }
 
-
-@media (max-width: 1400px) {
+@media (max-width: 1000px) {
     .left_view {
         display: none;
     }
     .wrapper {
-        width: 100%;
-        height: 100%;
         /* Position absolute here fills the page */
         grid-template-columns: 100%;
     }
