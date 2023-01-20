@@ -15,6 +15,8 @@ build
 pb_migrations
 LICENSE.md
 pocketbase.exe
+pocketbase-db/*.db-shm
+pocketbase-db/*.db-wal
 
 # misc
 .DS_Store
