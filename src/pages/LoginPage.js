@@ -19,7 +19,9 @@ function LoginPage() {
 
     async function onSubmit(data) {
         login({ email: data.email, password: data.password });
-        reset();
+        if (!isError) {
+            reset();
+        }
     }
 
     if (isLoggedIn) {
@@ -32,46 +34,68 @@ function LoginPage() {
 
     return (
         <div className="wrapper">
-            <div className="left_view">
+            <div className="left-view">
                 <img className="login-img" src={login_image_2} alt="" />
             </div>
-            <div className="right_view">
+            <div className="right-view">
                 <img src={logo} alt="logo" />
-
-                <p className="sign_in">Sign In</p>
-                <p className="welcome">
-                    Welcome Back! Please enter your login credentials.
-                </p>
-                {isLoading && <p>Loading...</p>}
+                <h1 id="sign-in-title">Sign In</h1>
+                <h2 id="welcome-title">Welcome Back!</h2>
+                {/* {isLoading && <p>Loading...</p>} */}
                 {isError && (
-                    <p style={{ color: "red" }}>
+                    <p
+                        style={{
+                            color: "red",
+                            fontSize: "1.4rem",
+                            marginTop: "1rem",
+                        }}>
                         Invalid Email or Password. Please try again.
                     </p>
                 )}
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input
                         placeholder="Email"
-                        className="email"
+                        id="email"
                         {...register("email")}
                     />
                     <input
                         placeholder="Password"
-                        className="password"
+                        id="password"
                         type="password"
                         {...register("password")}
                     />
-
-                    <div className="password_attri">
-                        <div className="remember_me">
-                            <input type="checkbox" />
-                            <p className="remember_me_word">Remember me</p>
-                        </div>
-                        <div className="forgot_pass">Forgot Password?</div>
+                    <div id="password-action-container">
+                        <label
+                            className="password-action-btn"
+                            id="remember-me-label"
+                            htmlFor="remember-me-checkbox">
+                            <input
+                                type="checkbox"
+                                name="is-remember-me"
+                                id="remember-me-checkbox"
+                                className="input-checkbox"
+                            />
+                            Remember me
+                        </label>
+                        <a
+                            href=""
+                            target="_blank"
+                            className="password-action-btn auth-link"
+                            id="forgot-password-link">
+                            Forgot Password?
+                        </a>
                     </div>
 
-                    <button className="login_button">
+                    <button id="login-button">
                         {isLoading ? "Loading..." : "Log In"}
                     </button>
+
+                    <p id="sign-up-prompt">
+                        Don't have an account?{" "}
+                        <a className="auth-link" href="" target="_blank">
+                            Sign up here
+                        </a>
+                    </p>
                 </form>
             </div>
         </div>
