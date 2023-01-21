@@ -5,6 +5,9 @@ import logo from '../assets/images/tmp_logo.png';
 import React from "react";
 
 function SignupPage() {
+    const handleSubmit = (e) => {
+        console.log('HELLO')
+    }
     return (
         <div className="w-screen h-screen grid grid-cols-1 lg:grid-cols-2">
             {/* Left View */}
@@ -13,15 +16,16 @@ function SignupPage() {
             </div>
 
             {/* Right View */}
-            <div className="overflow-auto lg:w-screen-1/2 lg:h-screen lg:px-[7rem] lg:text-center lg:items-center lg:flex lg:flex-col
-                            text-center w-screen p-[5rem] items-center flex flex-col">
+            <div className="md:overflow-auto px-[5rem] md:px-[7rem] flex flex-col justify-center items-center text-center">
+            {/* <div className="overflow-auto lg:w-screen-1/2 lg:h-screen lg:px-[7rem] lg:text-center lg:items-center lg:flex lg:flex-col
+                            text-center w-screen p-[5rem] items-center flex flex-col"> */}
                 <img className="" src={logo} alt="logo" />
                 <h1 className="text-[4.5rem] font-normal mt-[2rem]">Create an Account</h1>
                 <h2 className="text-[2rem] font-normal text-[#6C6C6C] mb-[7rem]">
                     Welcome Back! Please enter your details below to sign up.
                 </h2>
 
-                <form>
+                <form className="w-[100%]" onSubmit={e => {handleSubmit(e)}}>
                     <div className="grid grid-cols-2 gap-[7.1rem]">
                         <input
                             placeholder="First Name"
@@ -63,10 +67,10 @@ function SignupPage() {
                             <a className="text-[#F06680] text-[1.4rem] font-normal hover:text-[#F06680]" href="url">terms and conditions</a>
                         </label>
                     </div>
+                    <button className="text-[#ffffff] bg-[#F06680] rounded-[1rem] outline-none w-[70%] h-[3.6rem] mt-[2.8rem] mb-[2.4rem] text-[1.8rem] font-medium">
+                        Sign Up
+                    </button>
                 </form>
-                <button className="text-[#ffffff] bg-[#F06680] rounded-[1rem] outline-none w-[45rem] h-[3.6rem] mt-[2.8rem] mb-[2.4rem] text-[1.8rem] font-medium">
-                    Sign Up
-                </button>
                 <h1 className="text-[#776E6E] text-[1.4rem] font-normal">
                     Already have an account?&nbsp;
                     <a className="font-medium text-[#F06680] hover:text-[#F06680]" href="/login">Sign in</a>
