@@ -92,7 +92,7 @@ function LoginPage() {
 
                     <p id="sign-up-prompt">
                         Don't have an account?{" "}
-                        <a className="auth-link" href="" target="_blank">
+                        <a className="auth-link" href="/register">
                             Sign up here
                         </a>
                     </p>
