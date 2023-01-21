@@ -69,7 +69,7 @@ function SignupPage() {
                 </button>
                 <h1 className="text-[#776E6E] text-[1.4rem] font-normal">
                     Already have an account?&nbsp;
-                    <a className="font-medium text-[#F06680] hover:text-[#F06680]" href="/hello">Sign in</a>
+                    <a className="font-medium text-[#F06680] hover:text-[#F06680]" href="/login">Sign in</a>
                 </h1>
             </div>
         </div>

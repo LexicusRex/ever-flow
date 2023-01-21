@@ -117,7 +117,7 @@ function LoginPage() {
                         id="sign-up-prompt"
                         className="mt-[24px] text-[#776e6e] text-[1.4rem]">
                         Don't have an account?{" "}
-                        <a className="text-[#f06680]" href="" target="_blank">
+                        <a className="text-[#f06680]" href="/register">
                             Sign up here
                         </a>
                     </p>
