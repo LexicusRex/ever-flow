@@ -3,22 +3,21 @@ import logo from '../assets/images/tmp_logo.png';
 // import pb from "lib/pocketbase";
 // import { useForm } from "react-hook-form";
 import React from "react";
+import { useForm } from "react-hook-form";
+
 
 function SignupPage() {
-    const handleSubmit = (e) => {
-        console.log('HELLO')
-    }
+    const { register, handleSubmit, reset } = useForm();
+
     return (
         <div className="w-screen h-screen grid grid-cols-1 lg:grid-cols-2">
             {/* Left View */}
-            <div className="">
+            <div>
                 <img className="lg:absolute lg:w-screen-1/2 lg:h-screen lg:object-cover hidden lg:flex" src={left_image} alt="" />
             </div>
 
             {/* Right View */}
             <div className="md:overflow-auto px-[5rem] md:px-[7rem] flex flex-col justify-center items-center text-center">
-            {/* <div className="overflow-auto lg:w-screen-1/2 lg:h-screen lg:px-[7rem] lg:text-center lg:items-center lg:flex lg:flex-col
-                            text-center w-screen p-[5rem] items-center flex flex-col"> */}
                 <img className="" src={logo} alt="logo" />
                 <h1 className="text-[4.5rem] font-normal mt-[2rem]">Create an Account</h1>
                 <h2 className="text-[2rem] font-normal text-[#6C6C6C] mb-[7rem]">
@@ -31,11 +30,13 @@ function SignupPage() {
                             placeholder="First Name"
                             className="border-b-[2px] border-[#d8d8d8] text-[1.6rem] outline-0"
                             type='text'
+                            {...register("first_name")}
                         />
                         <input
                             placeholder="Last Name"
                             className="border-b-[2px] border-[#d8d8d8] text-[1.6rem] outline-0"
                             type='text'
+                            {...register("last_name")}
                         />
                     </div>
                     <div className="grid grid-row-2 mt-[5rem] gap-[5rem]">
@@ -43,11 +44,13 @@ function SignupPage() {
                             placeholder="Organisation Email"
                             className="border-b-[2px] border-[#d8d8d8] text-[1.6rem] outline-0"
                             type='email'
+                            {...register("email")}
                         />
                         <input
                             placeholder="Password"
                             className="border-b-[2px] border-[#d8d8d8] text-[1.6rem] outline-0"
                             type='password'
+                            {...register("password")}
                         />
                     </div>
                     {/* Password conditions: */}
