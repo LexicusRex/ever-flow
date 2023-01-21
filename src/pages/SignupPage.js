@@ -7,10 +7,13 @@ import React from "react";
 function SignupPage() {
     return (
         <div className="w-screen h-screen grid grid-cols-1 lg:grid-cols-2">
-            <img className="w-screen-1/2 h-screen hidden lg:flex" src={left_image} alt="" />
+            {/* Left View */}
+            <div className="">
+                <img className="lg:absolute lg:w-screen-1/2 lg:h-screen lg:object-cover hidden lg:flex" src={left_image} alt="" />
+            </div>
 
             {/* Right View */}
-            <div className="lg:w-screen-1/2 lg:h-screen lg:px-[7rem] lg:text-center lg:items-center lg:flex lg:flex-col
+            <div className="overflow-auto lg:w-screen-1/2 lg:h-screen lg:px-[7rem] lg:text-center lg:items-center lg:flex lg:flex-col
                             text-center w-screen p-[5rem] items-center flex flex-col">
                 <img className="" src={logo} alt="logo" />
                 <h1 className="text-[4.5rem] font-normal mt-[2rem]">Create an Account</h1>
