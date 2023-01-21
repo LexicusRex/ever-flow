@@ -63,7 +63,8 @@ function LoginPage() {
                             color: "red",
                             fontSize: "1.4rem",
                             marginTop: "1rem",
-                        }}>
+                        }}
+                    >
                         Invalid Email or Password. Please try again.
                     </p>
                 )}
@@ -89,7 +90,8 @@ function LoginPage() {
                         <label
                             className="flex items-center text-[#776e6e] leading-[2.1rem] mt-[24px] text-[1.4rem]"
                             id="remember-me-label"
-                            htmlFor="remember-me-checkbox">
+                            htmlFor="remember-me-checkbox"
+                        >
                             <input
                                 type="checkbox"
                                 name="is-remember-me"
@@ -101,6 +103,7 @@ function LoginPage() {
                         <a
                             href=""
                             target="_blank"
+
                             className="text-right leading-[2.1rem] mt-[24px] text-[1.4rem] text-[#f06680]"
                             id="forgot-password-link">
                             Forgot Password?
