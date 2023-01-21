@@ -10,6 +10,7 @@ function App() {
         <div>
             <Router>
                 <Routes>
+                    <Route exact path="/" element={<LoginPage/>}/>
                     <Route exact path="/login" element={<LoginPage/>}/>
                     <Route exact path="/register" element={<SignupPage/>} />
                 </Routes>
