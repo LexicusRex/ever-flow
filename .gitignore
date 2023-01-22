@@ -13,8 +13,10 @@ build
 
 # pocketbase
 pb_migrations
-*.data_shm
-*.data_wal
+pocketbase-db/pb_data/data.db-shm
+pocketbase-db/pb_data/data.db-wal
+pocketbase-db/pb_data/logs.db-shm
+pocketbase-db/pb_data/logs.db-wal
 
 # misc
 .DS_Store
