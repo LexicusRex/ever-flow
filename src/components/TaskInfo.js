@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 export default function TaskInfo(props) {
     let start = new Date(
@@ -7,6 +7,7 @@ export default function TaskInfo(props) {
     let due = new Date(props.info.due_date.slice(0, 10).replaceAll("-", "/"));
 
     const status = "Complete";
+    const progress = 0.5;
 
     const colorMap = {
         Assigned: "text-yellow-500",
@@ -15,7 +16,7 @@ export default function TaskInfo(props) {
         Complete: "text-green-500",
     };
     return (
-        <div className="flex flex-row text-[#414141] mb-[1.9rem] font-normal">
+        <div className="flex flex-row text-[#414141] mb-[3.2rem] font-normal align-middle">
             <p className="absolute text-[1.2rem] ml-[2.3rem]">
                 {/* {props.courseID} */}
                 {"ACTL3182"}
@@ -42,9 +43,10 @@ export default function TaskInfo(props) {
                 {/* {props.status} */}
                 {status}
             </p>
-            <p className="absolute text-[1.2rem] ml-[105rem]">
-                {/* {props.progress} */} asdasda
-            </p>
+
+            <div className="absolute w-[12.5rem] h-[1.3rem] bg-[#D9D9D9] ml-[100rem] mt-[0.1rem] rounded-[0.2rem]">
+                <div className="w-[90%] h-[1.3rem] rounded-[0.2rem] bg-[#83C96A]" />
+            </div>
         </div>
     );
 }
