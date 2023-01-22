@@ -7,7 +7,7 @@ import useSignup from "hooks/useSignup";
 import { useForm } from "react-hook-form";
 
 function SignupPage() {
-    const { mutate: signup, isLoading, isError } = useSignup();
+    const { mutate: signup, isError } = useSignup();
     const { register, handleSubmit, reset } = useForm();
 
     async function onSubmit(data) {

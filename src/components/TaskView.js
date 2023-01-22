@@ -1,5 +1,6 @@
 import React from "react";
 import Toggle from "./Toggle";
+import TaskInfo from "./TaskInfo";
 import { RiFilter2Fill } from "react-icons/ri";
 import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
 
@@ -22,8 +23,9 @@ function TaskView() {
                     <RiFilter2Fill color="#BFBFBF" size={25} />
                 </div>
             </div>
+
             {/* Titles: */}
-            <div className="flex flex-row text-[#776E6E] gap-[4rem] mt-[2.7rem]">
+            <div className="flex flex-row text-[#776E6E] gap-[4rem] mt-[2.7rem] mb-[1.7rem]">
                 <h1 className="text-[1.2rem] ml-[2.3rem]">Course ID</h1>
                 <h1 className="text-[1.2rem]">Project Name</h1>
                 <h1 className="text-[1.2rem] ml-[3rem]">Task Name</h1>
@@ -34,9 +36,23 @@ function TaskView() {
             </div>
 
             {/* Line separator */}
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-[2.4rem]">
                 <div className="border-[0.1rem] w-[110rem] bg-[#F0F3F6]" />
             </div>
+
+            {/* All tasks */}
+            <div className="w-screen h-[75%] overflow-auto ">
+                <TaskInfo
+                    courseID={"INFS3700"}
+                    projectName={"Assignment A"}
+                    taskName={"Milestone 1 First Draft Completion"}
+                    startDate={"11/05/2023"}
+                    dueDate={"18/05/2023"}
+                    status={"Assigned"}
+                    progress={"A"}
+                />
+            </div>
+            <TaskInfo />
         </div>
     );
 }
