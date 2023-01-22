@@ -7,14 +7,6 @@ export default function Toggle() {
     const [toggle, setToggle] = useState(true);
     const toggleClass = "transform translate-x-[94%]";
 
-    const getTaskTailWind = () => {
-        return toggle === true ? bold : nonBold;
-    };
-
-    const getMeetingTailWind = () => {
-        return toggle === true ? nonBold : bold;
-    };
-
     return (
         <div>
             {/* Switch Vie */}
@@ -34,8 +26,8 @@ export default function Toggle() {
                 ></div>
 
                 <div className="flex flex-row gap-[4.75rem] mt-[0.5rem] ml-[0.8rem]">
-                    <h1 className={getTaskTailWind()}>Tasks</h1>
-                    <h1 className={getMeetingTailWind()}>Meetings</h1>
+                    <h1 className={toggle ? bold : nonBold}>Tasks</h1>
+                    <h1 className={toggle ? nonBold : bold}>Meetings</h1>
                 </div>
             </div>
         </div>
