@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Toggle from "./Toggle";
 import TaskInfo from "./TaskInfo";
 import { RiFilter2Fill } from "react-icons/ri";
 import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
+import useFetch from "hooks/useFetch";
 
 function TaskView() {
+    const [tasks, setTasks] = useState("");
+    const { getTasks } = useFetch();
+
+    useEffect(() => {
+        const taskData = async () => {
+            let taskList = [];
+            const tmp = await getTasks();
+            setTasks(tmp);
+            tmp.forEach((e) => {
+                console.log(e);
+                taskList.push(<TaskInfo info={e} />);
+            });
+            setTasks(taskList);
+        };
+        taskData();
+    }, []);
+
     return (
         <div className="w-[115rem] h-[47.5rem] bg-white rounded-[1rem] drop-shadow overflow-hidden ">
             {/* Top layer title + switch bar + icons */}
@@ -41,18 +59,7 @@ function TaskView() {
             </div>
 
             {/* All tasks */}
-            <div className="w-screen h-[75%] overflow-auto ">
-                <TaskInfo
-                    courseID={"INFS3700"}
-                    projectName={"Assignment A"}
-                    taskName={"Milestone 1 First Draft Completion"}
-                    startDate={"11/05/2023"}
-                    dueDate={"18/05/2023"}
-                    status={"Assigned"}
-                    progress={"A"}
-                />
-            </div>
-            <TaskInfo />
+            <div className="w-screen h-[75%] overflow-auto ">{tasks}</div>
         </div>
     );
 }
