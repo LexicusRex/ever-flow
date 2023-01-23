@@ -25,7 +25,7 @@ function Dashboard() {
     // }, []);
 
     return (
-        <div className="bg-black w-[100%] h-screen">
+        <div className="bg-black w-screen h-screen">
             {/* {loginStatus &&
                 `Welcome back ${pb.authStore.model.name.split(" ")[0]}!`}
             <button
@@ -34,7 +34,7 @@ function Dashboard() {
                 onClick={handleLogout}>
                 Log Out
             </button> */}
-            <div className=" mr-6">
+            <div className="">
                 <TaskView />
             </div>
         </div>
