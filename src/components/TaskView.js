@@ -43,7 +43,7 @@ function TaskView() {
                             size={25}
                         />
                     </div>
-                    <div className="ml-[1.9rem]">
+                    <div className="ml-[1.9rem] mr-[3.5rem]">
                         <RiFilter2Fill color="#BFBFBF" size={25} />
                     </div>
                 </div>
