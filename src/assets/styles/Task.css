@@ -1,0 +1,14 @@
+@media screen and (max-width: 1000px) {
+    #taskViewMedia {
+        display: none;
+    }
+    #taskViewOuterBox {
+        width: 30rem;
+    }
+    #taskInfoProgressBar {
+        width: 8rem;
+    }
+    #taskViewProgressText {
+        margin-left: 2rem;
+    }
+}
