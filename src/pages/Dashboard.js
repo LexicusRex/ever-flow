@@ -2,6 +2,7 @@
 // import { usePocketbase } from "hooks/usePocketbase";
 import React from "react";
 import TaskView from "components/TaskView";
+import MenuBar from "components/MenuBar";
 
 // function Dashboard({ loginStatus, handleLogout }) {
 function Dashboard() {
@@ -25,7 +26,7 @@ function Dashboard() {
     // }, []);
 
     return (
-        <div className="bg-black w-screen h-screen">
+        <div className="h-screen w-screen bg-black">
             {/* {loginStatus &&
                 `Welcome back ${pb.authStore.model.name.split(" ")[0]}!`}
             <button
