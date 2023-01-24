@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/styles/Task.css";
 
 export default function TaskInfo(props) {
     let start = new Date(
@@ -17,31 +18,44 @@ export default function TaskInfo(props) {
     };
 
     return (
-        <div className="hover:bg-pink-600 hover:bg-opacity-[20%] h-[2.8rem] align-middle">
-            <div className="text-[#414141] ml-[2.1rem] flex h-fit">
+        <div className="hover:bg-pink-600 hover:bg-opacity-[20%] align-middle py-2 mb-[1.8rem]">
+            <div className="text-[#414141] ml-[2.1rem] flex">
+                {/* Left */}
                 <div className="grid grid-flow-col gap-x-[3.5rem]">
-                    <p className="text-[1.2rem] w-[6rem]">{"ACTL3182"}</p>
-                    <p className="text-[1.2rem] w-[11rem]">{"Assignment A"}</p>
-                    <p className="text-[1.2rem] w-[20rem]">
+                    <div id="taskViewMedia" className="text-[1.2rem] w-[6rem]">
+                        {"ACTL3182"}
+                    </div>
+                    <div className="text-[1.2rem] w-[11rem]">
+                        {"Assignment A"}
+                    </div>
+                    <div className="text-[1.2rem] w-[20rem]">
                         {props.info.title}
-                    </p>
-                </div>
+                    </div>
 
-                <div className="ml-auto grid grid-flow-col gap-x-[4rem]">
-                    <p className="text-[1.2rem] w-[6.4rem]">
+                    <div
+                        id="taskViewMedia"
+                        className="text-[1.2rem] w-[6.4rem]"
+                    >
                         {`${start.getDate()}/${(
                             "0" +
                             (start.getMonth() + 1)
                         ).slice(-2)}/${start.getFullYear()}`}
-                    </p>
-                    <p className="text-[1.2rem] w-[6.4rem]">
+                    </div>
+                    <div className="text-[1.2rem] w-[6.4rem]">
                         {`${due.getDate()}/${("0" + (due.getMonth() + 1)).slice(
                             -2
                         )}/${due.getFullYear()}`}
-                    </p>
-                    <p className="text-[1.2rem] w-[6rem]">{status}</p>
+                    </div>
+                    <div
+                        className={`w-[6rem] text-[1.2rem] ${colorMap[status]}`}
+                    >
+                        {status}
+                    </div>
 
-                    <div className="mr-[2.2rem] w-[12rem] h-[1.3rem] bg-[#D9D9D9] mt-[0.1rem] rounded-[0.2rem]">
+                    <div
+                        id="taskInfoProgressBar"
+                        className="ml-[1rem] w-[14rem] h-[1.3rem] bg-[#D9D9D9] mt-[0.1rem] rounded-[0.2rem]"
+                    >
                         <div className="w-[10%] h-[1.3rem] rounded-[0.2rem] bg-[#83C96A]" />
                     </div>
                 </div>

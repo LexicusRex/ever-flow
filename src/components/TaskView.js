@@ -4,6 +4,7 @@ import TaskInfo from "./TaskInfo";
 import { RiFilter2Fill } from "react-icons/ri";
 import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
 import useFetch from "hooks/useFetch";
+import "../assets/styles/Task.css";
 
 function TaskView() {
     const [tasks, setTasks] = useState("");
@@ -24,7 +25,10 @@ function TaskView() {
     }, []);
 
     return (
-        <div className="w-[100rem] h-[47.5rem] bg-white rounded-[1rem] drop-shadow pt-[2.3rem] min-w-fit">
+        <div
+            id="taskViewOuterBox"
+            className="w-[100rem] h-[47.5rem] bg-white rounded-[1rem] drop-shadow pt-[2.3rem] min-w-fit"
+        >
             {/* Top layer title + switch bar + icons */}
             <div className="flex">
                 <div className="ml-[2.1rem]">
@@ -52,17 +56,29 @@ function TaskView() {
             {/* Title row */}
             <div className="text-[#776E6E] mt-[2.7rem] mb-[1.7rem] ml-[2.1rem] flex">
                 <div className="grid grid-flow-col gap-x-[3.5rem]">
-                    <h1 className="text-[1.2rem] min-w-[6rem]">Course ID</h1>
+                    <h1
+                        id="taskViewMedia"
+                        className="text-[1.2rem] min-w-[6rem]"
+                    >
+                        Course ID
+                    </h1>
                     <h1 className="text-[1.2rem] min-w-[11rem]">
                         Project Name
                     </h1>
                     <h1 className="text-[1.2rem] w-[20rem]">Task Name</h1>
-                </div>
-                <div className="ml-auto grid grid-flow-col gap-x-[4rem]">
-                    <h1 className="text-[1.2rem] min-w-[6.4rem]">Start Date</h1>
+
+                    <h1
+                        id="taskViewMedia"
+                        className="text-[1.2rem] min-w-[6.4rem]"
+                    >
+                        Start Date
+                    </h1>
                     <h1 className="text-[1.2rem] min-w-[6.4rem]">Due Date</h1>
                     <h1 className="text-[1.2rem] min-w-[6rem]">Status</h1>
-                    <h1 className="text-[1.2rem] mr-[7rem] ml-[2rem]">
+                    <h1
+                        id="taskViewProgressText"
+                        className="text-[1.2rem] ml-[4.5rem]"
+                    >
                         Progress
                     </h1>
                 </div>
