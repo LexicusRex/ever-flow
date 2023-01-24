@@ -24,7 +24,7 @@ function TaskView() {
     }, []);
 
     return (
-        <div className="w-[60vw] h-[47.5rem] bg-white rounded-[1rem] drop-shadow pt-[2.3rem] min-w-fit">
+        <div className="w-[100rem] h-[47.5rem] bg-white rounded-[1rem] drop-shadow pt-[2.3rem] min-w-fit">
             {/* Top layer title + switch bar + icons */}
             <div className="flex">
                 <div className="ml-[2.1rem]">
@@ -47,6 +47,35 @@ function TaskView() {
                         <RiFilter2Fill color="#BFBFBF" size={25} />
                     </div>
                 </div>
+            </div>
+
+            {/* Title row */}
+            <div className="text-[#776E6E] mt-[2.7rem] mb-[1.7rem] ml-[2.1rem] flex">
+                <div className="grid grid-flow-col gap-x-[3.5rem]">
+                    <h1 className="text-[1.2rem] min-w-[6rem]">Course ID</h1>
+                    <h1 className="text-[1.2rem] min-w-[11rem]">
+                        Project Name
+                    </h1>
+                    <h1 className="text-[1.2rem] w-[20rem]">Task Name</h1>
+                </div>
+                <div className="ml-auto grid grid-flow-col gap-x-[4rem]">
+                    <h1 className="text-[1.2rem] min-w-[6.4rem]">Start Date</h1>
+                    <h1 className="text-[1.2rem] min-w-[6.4rem]">Due Date</h1>
+                    <h1 className="text-[1.2rem] min-w-[6rem]">Status</h1>
+                    <h1 className="text-[1.2rem] mr-[7rem] ml-[2rem]">
+                        Progress
+                    </h1>
+                </div>
+            </div>
+
+            {/* Line breaker */}
+            <div className="flex justify-center">
+                <div className="border-[0.1rem] w-[95%] bg-[#F0F3F6]" />
+            </div>
+
+            {/* Tasks */}
+            <div className="min-w-fit h-[75%] overflow-auto mt-[2.3rem]">
+                {tasks}
             </div>
         </div>
     );
