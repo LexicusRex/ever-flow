@@ -17,6 +17,7 @@ html {
 
 * {
     font-family: "Poppins";
+    margin: none;
 }
 
 code {
