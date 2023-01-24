@@ -26,7 +26,8 @@ function Dashboard() {
     // }, []);
 
     return (
-        <div className="h-screen w-screen bg-black">
+        <div className="h-screen w-[100%] bg-black">
+            <MenuBar itemFocus={"Dashboard"} />
             {/* {loginStatus &&
                 `Welcome back ${pb.authStore.model.name.split(" ")[0]}!`}
             <button
@@ -35,7 +36,7 @@ function Dashboard() {
                 onClick={handleLogout}>
                 Log Out
             </button> */}
-            <div className="">
+            <div className=" mr-6">
                 <TaskView />
             </div>
         </div>
