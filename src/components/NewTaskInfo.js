@@ -8,10 +8,6 @@ function NewTaskInfo({ course, project, task, start, due, status, progress }) {
     };
     const taskInfoStyles = "truncate";
 
-    function getProgress(progress) {
-        return `w-[${progress}%]`;
-    }
-
     return (
         <div
             className={clsx(
@@ -22,7 +18,7 @@ function NewTaskInfo({ course, project, task, start, due, status, progress }) {
                 "px-[2.3rem]",
                 "text-[1.2rem]",
                 "text-[#414141]",
-                "hover:bg-[#F0668033]"
+                "hover:bg-mild-accent"
             )}
         >
             <div className={`w-[6rem] ${taskInfoStyles}`}>{course}</div>
@@ -44,8 +40,7 @@ function NewTaskInfo({ course, project, task, start, due, status, progress }) {
                 <div
                     className={clsx(
                         "h-full",
-                        // "w-[60%]",
-                        `${getProgress(progress)}`,
+                        `w-[${progress}%]`,
                         "rounded-[0.2rem]",
                         "bg-[#83C96A]"
                     )}

@@ -24,7 +24,7 @@ function TaskOverview() {
     };
 
     return (
-        <div className="rounded-xl bg-white p-[1.5rem]">
+        <div className="mx-[2rem] my-[1.5rem] max-w-[122rem] rounded-xl bg-white p-[1.5rem]">
             <div className="flex p-[1.3rem]">
                 <h2 className="text-[3rem] font-semibold leading-[4.5rem]">
                     Overview
