@@ -19,7 +19,7 @@
   <p align="center">
     A project management and task tracking web app for simplifying your workflow.
     <br />
-    <a href="https://github.com/LexicusRex/ever-flow"><strong>~~Explore the docs »~~</strong></a>
+    <a href="https://github.com/LexicusRex/ever-flow"><strong>❌Explore the docs »</strong></a>
     <br />
     <br />
     <a href="#about-the-project">About The Project</a>
@@ -144,6 +144,8 @@ Project Link: [ever-flow](https://github.com/LexicusRex/ever-flow)
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
+
+❌
 
 This project uses the following open source modules:
 
