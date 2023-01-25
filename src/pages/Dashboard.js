@@ -1,11 +1,13 @@
-// import pb from "lib/pocketbase";
-// import { usePocketbase } from "hooks/usePocketbase";
+import pb from "lib/pocketbase";
+import { usePocketbase } from "hooks/usePocketbase";
 import React from "react";
 import TaskView from "components/TaskView";
+import NewTaskView from "components/NewTaskView";
 import MenuBar from "components/MenuBar";
+import TaskOverview from "components/TaskOverview";
 
-// function Dashboard({ loginStatus, handleLogout }) {
-function Dashboard() {
+function Dashboard({ loginStatus, handleLogout }) {
+    // function Dashboard() {
     // const { getGroups, getUsers } = usePocketbase();
 
     // useEffect(() => {
@@ -28,16 +30,18 @@ function Dashboard() {
     return (
         <div className="h-screen w-[100%] bg-black">
             <MenuBar itemFocus={"Dashboard"} />
-            {/* {loginStatus &&
+            {loginStatus &&
                 `Welcome back ${pb.authStore.model.name.split(" ")[0]}!`}
             <button
                 type="button"
                 className="btn btn-primary"
-                onClick={handleLogout}>
+                onClick={handleLogout}
+            >
                 Log Out
-            </button> */}
-            <div className=" mr-6">
-                <TaskView />
+            </button>
+            <div className="">
+                <TaskOverview />
+                <NewTaskView />
             </div>
         </div>
     );

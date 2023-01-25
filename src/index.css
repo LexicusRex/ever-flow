@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --accent-color: #8378e3;
+    --accent-mild-color: #8378e333;
+    --accent-focus-color: #8378e366;
+    --accent-semi-color: #8378e3cc;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
