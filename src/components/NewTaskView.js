@@ -6,6 +6,7 @@ import NewTaskViewHeader from "./NewTaskViewHeader";
 import Toggle from "./Toggle";
 import { RiFilter2Fill } from "react-icons/ri";
 import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
+import "../assets/styles/TaskView.css";
 
 function NewTaskView() {
     const { getGroups, getUsers } = usePocketbase();
@@ -22,7 +23,7 @@ function NewTaskView() {
         start: "11/8/2001",
         due: "Thursday",
         status: "ongoing",
-        progress: "40%",
+        progress: 50,
     };
     const taskTrack2 = {
         course: "FINS3666",
@@ -31,7 +32,7 @@ function NewTaskView() {
         start: "13/6/2020",
         due: "16/6/2020",
         status: "assigned",
-        progress: "20%",
+        progress: 20,
     };
     const taskTrack3 = {
         course: "COMP3311",
@@ -40,7 +41,7 @@ function NewTaskView() {
         start: "19/11/2022",
         due: "19/11/2022",
         status: "complete",
-        progress: "20%",
+        progress: 100,
     };
 
     return (
@@ -75,7 +76,7 @@ function NewTaskView() {
                 </div>
             </div>
             <NewTaskViewHeader />
-            <div className="overflow-y-auto">
+            <div id="task-info-area" className="overflow-y-auto">
                 <NewTaskInfo {...taskTrack1} />
                 <NewTaskInfo {...taskTrack2} />
                 <NewTaskInfo {...taskTrack3} />
@@ -85,11 +86,6 @@ function NewTaskView() {
                 <NewTaskInfo {...taskTrack1} />
                 <NewTaskInfo {...taskTrack2} />
                 <NewTaskInfo {...taskTrack3} />
-                <NewTaskInfo {...taskTrack1} />
-                <NewTaskInfo {...taskTrack3} />
-                <NewTaskInfo {...taskTrack2} />
-                <NewTaskInfo {...taskTrack1} />
-                <NewTaskInfo {...taskTrack2} />
                 <NewTaskInfo {...taskTrack3} />
                 <NewTaskInfo {...taskTrack1} />
                 <NewTaskInfo {...taskTrack3} />
@@ -97,21 +93,6 @@ function NewTaskView() {
                 <NewTaskInfo {...taskTrack1} />
                 <NewTaskInfo {...taskTrack2} />
                 <NewTaskInfo {...taskTrack3} />
-                <NewTaskInfo {...taskTrack1} />
-                <NewTaskInfo {...taskTrack3} />
-                <NewTaskInfo {...taskTrack2} />
-                <NewTaskInfo {...taskTrack1} />
-                <NewTaskInfo {...taskTrack2} />
-                <NewTaskInfo {...taskTrack3} />
-                <NewTaskInfo {...taskTrack1} />
-                <NewTaskInfo {...taskTrack3} />
-                <NewTaskInfo {...taskTrack2} />
-                <NewTaskInfo {...taskTrack1} />
-                <NewTaskInfo {...taskTrack2} />
-                <NewTaskInfo {...taskTrack3} />
-                <NewTaskInfo {...taskTrack1} />
-                <NewTaskInfo {...taskTrack3} />
-                <NewTaskInfo {...taskTrack2} />
             </div>
         </div>
     );
