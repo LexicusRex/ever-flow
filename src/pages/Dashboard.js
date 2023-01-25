@@ -2,6 +2,7 @@
 // import { usePocketbase } from "hooks/usePocketbase";
 import React from "react";
 import TaskView from "components/TaskView";
+import NewTaskView from "components/NewTaskView";
 import MenuBar from "components/MenuBar";
 
 // function Dashboard({ loginStatus, handleLogout }) {
@@ -36,8 +37,8 @@ function Dashboard() {
                 onClick={handleLogout}>
                 Log Out
             </button> */}
-            <div className=" mr-6">
-                <TaskView />
+            <div>
+                <NewTaskView />
             </div>
         </div>
     );
