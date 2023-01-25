@@ -13,19 +13,21 @@ function MenuItem({ itemType, itemName, focusedItem }) {
     return (
         <a
             className={`py-[14px] ${
-                itemName === focusedItem && "bg-[#F0668066]"
+                itemName === focusedItem && "bg-focus-accent"
             } ${
-                itemName !== focusedItem && "hover:bg-[#F0668033]"
-            } w-full rounded-[1rem] mb-[12px] cursor-pointer`}>
+                itemName !== focusedItem && "hover:bg-mild-accent"
+            } mb-[12px] w-full cursor-pointer rounded-[1rem]`}
+        >
             <p
-                className="ml-[45px] mb-0 align-middle leading-[2.4rem] text-[1.8rem] "
+                className="ml-[45px] mb-0 align-middle text-[1.8rem] leading-[2.4rem] "
                 onClick={useCallback(
                     () =>
                         navigate(`/${itemName.toLowerCase()}`, {
                             replace: true,
                         }),
                     [navigate]
-                )}>
+                )}
+            >
                 {itemName}
             </p>
         </a>

@@ -1,5 +1,5 @@
 import left_image from "../assets/images/login_image_1.png";
-import logo from "../assets/images/tmp_logo.png";
+import logo from "../assets/images/logo-left.svg";
 // import pb from "lib/pocketbase";
 // import { useForm } from "react-hook-form";
 import React from "react";
@@ -23,11 +23,11 @@ function SignupPage() {
     }
 
     return (
-        <div className="w-screen h-screen grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid h-screen w-screen grid-cols-1 lg:grid-cols-2">
             {/* Left View */}
             <div className="">
                 <img
-                    className="lg:absolute lg:w-screen-1/2 lg:h-screen lg:object-cover hidden lg:flex"
+                    className="hidden lg:absolute lg:flex lg:h-screen lg:w-screen-1/2 lg:object-cover"
                     src={left_image}
                     alt=""
                 />
@@ -35,14 +35,14 @@ function SignupPage() {
 
             {/* Right View */}
             <div
-                className="overflow-auto lg:w-screen-1/2 lg:h-screen lg:px-[7rem] lg:text-center lg:items-center lg:flex lg:flex-col
-                            text-center w-screen p-[5rem] items-center flex flex-col"
+                className="flex w-screen flex-col items-center justify-center overflow-auto p-[5rem] text-center lg:flex
+                            lg:h-screen lg:w-screen-1/2 lg:flex-col lg:items-center lg:px-[7rem] lg:text-center"
             >
-                <img className="" src={logo} alt="logo" />
-                <h1 className="text-[4.5rem] font-normal mt-[2rem]">
+                <img className="max-w-[50rem]" src={logo} alt="logo" />
+                <h1 className="mt-[2rem] text-[4.5rem] font-normal">
                     Create an Account
                 </h1>
-                <h2 className="text-[2rem] font-normal text-[#6C6C6C] mb-[7rem]">
+                <h2 className="mb-[7rem] text-[2rem] font-normal text-[#6C6C6C]">
                     Welcome Back! Please enter your details below to sign up.
                 </h2>
 
@@ -61,7 +61,7 @@ function SignupPage() {
                             {...register("lastName")}
                         />
                     </div>
-                    <div className="grid grid-row-2 mt-[5rem] gap-[5rem]">
+                    <div className="grid-row-2 mt-[5rem] grid gap-[5rem]">
                         <input
                             placeholder="Organisation Email"
                             className="border-b-[2px] border-[#d8d8d8] text-[1.6rem] outline-0"
@@ -76,10 +76,10 @@ function SignupPage() {
                         />
                     </div>
                     {/* Password conditions: */}
-                    <h2 className="text-left ml-[1rem] font-normal text-[1.2rem] text-[#776E6E]">
+                    <h2 className="ml-[1rem] text-left text-[1.2rem] font-normal text-[#776E6E]">
                         Password must contain at least:
                     </h2>
-                    <ul className="ml-[2.75rem] list-disc text-left font-normal text-[1rem] text-[#776E6E] mb-[4.2rem]">
+                    <ul className="ml-[2.75rem] mb-[4.2rem] list-disc text-left text-[1rem] font-normal text-[#776E6E]">
                         <li>8 Characters</li>
                         <li>1 Uppercase Letter</li>
                         <li>1 Lowercase Letter</li>
@@ -89,29 +89,29 @@ function SignupPage() {
                     <div className="flex self-start">
                         <label
                             htmlFor="toc-checkbox"
-                            className="text-[#776E6E] text-[1.4rem] font-normal"
+                            className="text-[1.4rem] font-normal text-[#776E6E]"
                         >
                             <input
                                 type="checkbox"
-                                className="align-middle mr-[0.625rem]"
+                                className="mr-[0.625rem] align-middle accent-full-accent"
                             />
                             By signing up, you agree with our&nbsp;
                             <a
-                                className="text-[#F06680] text-[1.4rem] font-normal hover:text-[#F06680]"
+                                className="text-[1.4rem] font-normal text-full-accent hover:text-full-accent"
                                 href="url"
                             >
                                 terms and conditions
                             </a>
                         </label>
                     </div>
-                    <button className="text-[#ffffff] bg-[#F06680] hover:bg-[#F0667fc7] focus:outline-none rounded-[1rem] outline-none w-[45rem] h-[3.6rem] mt-[2.8rem] mb-[2.4rem] text-[1.8rem] font-medium">
+                    <button className="mt-[2.8rem] mb-[2.4rem] h-[3.6rem] w-[45rem] rounded-[1rem] bg-full-accent text-[1.8rem] font-medium text-[#ffffff] outline-none hover:bg-semi-accent focus:outline-none">
                         Sign Up
                     </button>
                 </form>
-                <h1 className="text-[#776E6E] text-[1.4rem] font-normal">
+                <h1 className="text-[1.4rem] font-normal text-[#776E6E]">
                     Already have an account?&nbsp;
                     <a
-                        className="font-medium text-[#F06680] hover:text-[#F06680]"
+                        className="font-medium text-full-accent hover:text-full-accent"
                         href="/login"
                     >
                         Sign in
