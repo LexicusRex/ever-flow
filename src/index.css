@@ -7,6 +7,7 @@
     --accent-mild-color: #8378e333;
     --accent-focus-color: #8378e366;
     --accent-semi-color: #8378e3cc;
+    --text-secondary-color: #776e6e;
 }
 
 body {
@@ -30,4 +31,8 @@ html {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
+}
+
+.scrollview {
+    overflow-y: overlay;
 }
