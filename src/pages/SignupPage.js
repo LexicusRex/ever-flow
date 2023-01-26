@@ -35,7 +35,7 @@ function SignupPage() {
 
             {/* Right View */}
             <div
-                className="flex h-[7rem] w-screen flex-col items-center justify-center overflow-auto p-[5rem] text-center lg:flex
+                className="flex h-screen w-screen flex-col items-center justify-center overflow-y-auto p-[5rem] text-center lg:flex
                             lg:h-screen lg:w-screen-1/2 lg:flex-col lg:items-center lg:px-[7rem] lg:text-center"
             >
                 <img className="h-[20rem] w-[50rem]" src={logo} alt="logo" />
@@ -93,7 +93,7 @@ function SignupPage() {
                         >
                             <input
                                 type="checkbox"
-                                className="mr-[0.625rem] align-middle accent-full-accent"
+                                className="mr-[0.625rem] h-[1.6rem] w-[1.6rem] align-middle accent-full-accent"
                             />
                             By signing up, you agree with our&nbsp;
                             <a
