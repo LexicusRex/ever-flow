@@ -41,15 +41,16 @@ function ProjectTaskBoard() {
         // TODO - change width and height to be responsive
         <div
             // h-[82.5rem]
+            // px-[1.8rem]
             className="
                 flex
                 h-fit
                 w-[118.5rem]
-                justify-between
+                flex-wrap
+                justify-around
                 rounded-t-[10px]
                 bg-[#eceff1]
-                px-[1.8rem]
-                py-[2.5rem]
+                pb-[2.5rem]
             "
         >
             {/* <TaskBranch taskBranchName={"Backlog"} /> */}

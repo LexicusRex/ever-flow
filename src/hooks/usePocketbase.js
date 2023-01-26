@@ -10,7 +10,7 @@ export const usePocketbase = () => {
     const getTasks = async () => {
         return pb
             .collection("tasks")
-            .getFullList(200, { sort: "-created", expand: "groups" });
+            .getFullList(200, { sort: "created", expand: "groups" });
     };
 
     const getUsers = async () => {

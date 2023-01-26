@@ -23,8 +23,9 @@ function TaskBranch({ taskBranchName, tasks }) {
     });
 
     return (
+        // mx-[1.8rem]
         <div id="branch-area" className="h-full w-[26rem]">
-            <div className="flex h-[5.5rem] items-center rounded-[10px] bg-white px-[2.3rem] text-[2.2rem] font-medium leading-[2.6rem]">
+            <div className="mt-[3.5rem] flex h-[5.5rem] items-center rounded-[10px] bg-white px-[2.3rem] text-[2.2rem] font-medium leading-[2.6rem]">
                 {taskBranchName}
             </div>
             {/* <TaskCard {...card1} />
