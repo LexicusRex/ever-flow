@@ -12,6 +12,7 @@ module.exports = {
                 "mild-accent": "var(--accent-mild-color)",
                 "focus-accent": "var(--accent-focus-color)",
                 "semi-accent": "var(--accent-semi-color)",
+                secondary: "var(--text-secondary-color)",
             },
         },
     },
