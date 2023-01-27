@@ -33,7 +33,7 @@ function Dashboard({ loginStatus, handleLogout }) {
     const [selectedDay, setSelectedDay] = useState(null);
 
     return (
-        <div className="h-screen w-[100%] bg-white">
+        <div className="h-screen w-screen bg-white">
             <MenuBar itemFocus={"Dashboard"} />
             {loginStatus &&
                 `Welcome back ${pb.authStore.model.name.split(" ")[0]}!`}
@@ -44,16 +44,21 @@ function Dashboard({ loginStatus, handleLogout }) {
             >
                 Log Out
             </button>
-            <div id="dashBoardWrapper">
-                <TaskOverview />
-                <Calendar
-                    className=""
-                    value={selectedDay}
-                    onChange={setSelectedDay}
-                    shouldHighlightWeekends
-                />
-                <MountainProgressView />
-                <NewTaskView />
+
+            <div className="w-screen">
+                <div className="mx-auto flex max-w-[160rem]">
+                    <TaskOverview />
+                    <Calendar
+                        className=""
+                        value={selectedDay}
+                        onChange={setSelectedDay}
+                        shouldHighlightWeekends
+                    />
+                </div>
+                <div className=" mx-auto flex h-[20rem] max-w-[160rem]">
+                    <MountainProgressView />
+                    <NewTaskView />
+                </div>
             </div>
         </div>
     );

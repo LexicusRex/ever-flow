@@ -47,15 +47,14 @@ function NewTaskView() {
     return (
         <div
             className={clsx(
-                "max-w-[115rem]",
-                "min-w-[80rem]",
+                "w-[80%]",
                 "flex",
                 "flex-column",
                 "h-[47.5rem]",
                 "bg-white",
                 "rounded-[1rem]",
                 "py-[2.3rem]",
-                "mx-[2rem]",
+                "mx-[1.5rem]",
                 "my-[1.5rem]",
                 "drop-shadow"
             )}
