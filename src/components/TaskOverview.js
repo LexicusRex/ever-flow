@@ -45,11 +45,9 @@ function TaskOverview() {
                         shadow-sm
                         focus:outline-none
                     `}
+                    defaultValue={"week"}
                     required
                 >
-                    <option disabled selected value>
-                        Select Time Range
-                    </option>
                     <option value="week">Last Week</option>
                     <option value="month">Last 30 Days</option>
                     <option value="quarter">Last 3 Months</option>

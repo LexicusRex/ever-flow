@@ -44,7 +44,7 @@ function LoginPage() {
                 />
             </div>
             {/* Right view */}
-            <div className="flex flex-col items-center justify-center overflow-y-auto overflow-x-hidden px-[5rem] text-center lg:px-[9rem]">
+            <div className="flex h-screen flex-col items-center overflow-y-auto overflow-x-hidden px-[5rem] pt-[12rem] text-center lg:px-[9rem]">
                 <img className="max-w-[50rem]" src={logo} alt="logo" />
                 {/* Login Title */}
                 <h1 className="mt-[3.6rem] text-[4.5rem]" id="login-title">
