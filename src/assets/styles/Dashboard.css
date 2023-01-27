@@ -1,0 +1,5 @@
+#dashBoardWrapper {
+    grid-template-rows: fit-content(8ch) fit-content(8ch) 1fr 1f;
+    grid-template-columns: fit-content(8ch) fit-content(8ch) 1fr 1f;
+    display: grid;
+}

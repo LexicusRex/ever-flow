@@ -1,10 +1,14 @@
 import pb from "lib/pocketbase";
 import { usePocketbase } from "hooks/usePocketbase";
-import React from "react";
+import React, { useState } from "react";
 import TaskView from "components/TaskView";
 import NewTaskView from "components/NewTaskView";
 import MenuBar from "components/MenuBar";
 import TaskOverview from "components/TaskOverview";
+import MountainProgressView from "components/Dashboard/MountainProgressView";
+import { Calendar } from "react-modern-calendar-datepicker";
+import "react-modern-calendar-datepicker/lib/DatePicker.css";
+import "../assets/styles/Dashboard.css";
 
 function Dashboard({ loginStatus, handleLogout }) {
     // function Dashboard() {
@@ -26,9 +30,10 @@ function Dashboard({ loginStatus, handleLogout }) {
 
     //     loadData();
     // }, []);
+    const [selectedDay, setSelectedDay] = useState(null);
 
     return (
-        <div className="h-screen w-[100%] bg-black">
+        <div className="h-screen w-[100%] bg-white">
             <MenuBar itemFocus={"Dashboard"} />
             {loginStatus &&
                 `Welcome back ${pb.authStore.model.name.split(" ")[0]}!`}
@@ -39,8 +44,15 @@ function Dashboard({ loginStatus, handleLogout }) {
             >
                 Log Out
             </button>
-            <div className="">
+            <div id="dashBoardWrapper">
                 <TaskOverview />
+                <Calendar
+                    className=""
+                    value={selectedDay}
+                    onChange={setSelectedDay}
+                    shouldHighlightWeekends
+                />
+                <MountainProgressView />
                 <NewTaskView />
             </div>
         </div>

@@ -56,7 +56,8 @@ function NewTaskView() {
                 "rounded-[1rem]",
                 "py-[2.3rem]",
                 "mx-[2rem]",
-                "my-[1.5rem]"
+                "my-[1.5rem]",
+                "drop-shadow"
             )}
         >
             <div className="flex">
