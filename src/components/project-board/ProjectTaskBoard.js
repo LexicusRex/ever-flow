@@ -45,9 +45,11 @@ function ProjectTaskBoard() {
             className="
                 flex
                 h-fit
+                max-h-[82.5rem]
                 w-[118.5rem]
                 flex-wrap
                 justify-around
+                overflow-y-auto
                 rounded-t-[10px]
                 bg-[#eceff1]
                 pb-[2.5rem]
