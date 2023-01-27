@@ -35,7 +35,7 @@ function SignupPage() {
 
             {/* Right View */}
             <div
-                className="flex h-screen w-screen flex-col items-center justify-center overflow-y-auto p-[5rem] text-center lg:flex
+                className="flex w-screen flex-col items-center overflow-y-auto p-[5rem] text-center lg:flex
                             lg:h-screen lg:w-screen-1/2 lg:flex-col lg:items-center lg:px-[7rem] lg:text-center"
             >
                 <img className="h-[20rem] w-[50rem]" src={logo} alt="logo" />
