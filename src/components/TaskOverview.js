@@ -40,6 +40,7 @@ function TaskOverview() {
                 shadow
             "
         >
+            <div className="mx-[57rem] h-[3px] w-[5px] bg-white"></div>
             <div className="flex p-[1.3rem]">
                 <h2 className="text-[3rem] font-semibold leading-[4.5rem]">
                     Overview
