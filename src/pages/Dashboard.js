@@ -28,20 +28,51 @@ function Dashboard({ loginStatus, handleLogout }) {
     // }, []);
 
     return (
-        <div className="h-screen w-[100%] bg-black">
+        <div className="flex h-full">
+            {/* <div className="absolute left-[245px]"> */}
             <MenuBar itemFocus={"Dashboard"} />
-            {loginStatus &&
-                `Welcome back ${pb.authStore.model.name.split(" ")[0]}!`}
-            <button
-                type="button"
-                className="btn btn-primary"
-                onClick={handleLogout}
-            >
-                Log Out
-            </button>
-            <div className="">
-                <TaskOverview />
-                <NewTaskView />
+            <div className="h-screen min-w-[280px] bg-red-300"></div>
+            <div className="max-w-[167.5rem] pl-[1.5rem]">
+                <div className="flex h-[12.5rem] w-full items-end  px-[2rem]">
+                    <div className="flex items-center">
+                        <div className="h-[6rem] w-[6rem] rounded-full bg-yellow-300"></div>
+                        {loginStatus && (
+                            <div className="px-[2rem] ">
+                                <h1 className="text-[3.2rem] font-semibold leading-[2.6rem]">
+                                    Welcome back{" "}
+                                    {`${
+                                        pb.authStore.model.name.split(" ")[0]
+                                    }!`}
+                                </h1>
+                                <p className="pt-[1rem] text-[2rem]">
+                                    {new Date(Date.now()).toLocaleDateString(
+                                        "en-GB",
+                                        {
+                                            year: "numeric",
+                                            month: "long",
+                                            day: "numeric",
+                                        }
+                                    )}
+                                </p>
+                            </div>
+                        )}
+                        <button
+                            type="button"
+                            className="btn btn-primary"
+                            onClick={handleLogout}
+                        >
+                            Log Out
+                        </button>
+                    </div>
+                </div>
+                <div className="grid grid-flow-col py-[1.5rem]">
+                    <TaskOverview />
+                    <div className="mx-[2rem] my-[1.5rem] h-[100%] w-[313px] rounded-[10px] bg-white shadow"></div>
+                </div>
+                <div className="grid grid-flow-col pt-[3rem] pb-[2rem]">
+                    <div className="mx-[2rem] h-full w-[400px] rounded-[10px] bg-white shadow"></div>
+                    <NewTaskView />
+                </div>
             </div>
         </div>
     );
