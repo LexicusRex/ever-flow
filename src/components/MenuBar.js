@@ -11,15 +11,15 @@ function MenuBar({ itemFocus }) {
 
     return (
         <div>
-            <button
+            {/* <button
                 className={`hamburger ${toggleMenu && "is-active"}`}
                 onClick={handleMenuToggle}
             >
                 <div className="bar"></div>
-            </button>
+            </button> */}
 
             <div
-                id="menu"
+                // id="menu"
                 className="fixed h-[100vh] w-[280px] border-[1px] bg-white px-[17px]"
             >
                 {/* <div> */}

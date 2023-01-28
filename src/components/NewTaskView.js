@@ -47,18 +47,23 @@ function NewTaskView() {
     return (
         <div
             className={clsx(
-                "max-w-[115rem]",
-                "min-w-[80rem]",
+                "max-w-[114rem]",
+                "min-w-[60rem]",
+                // "w-fit",
+                // "w-[1150px]",
                 "flex",
                 "flex-column",
-                "h-[47.5rem]",
+                // "h-full",
+                "h-[41vh]",
                 "bg-white",
                 "rounded-[1rem]",
                 "py-[2.3rem]",
                 "mx-[2rem]",
-                "my-[1.5rem]"
+                "shadow"
+                // "my-[1.5rem]"
             )}
         >
+            <div className="mx-[58rem] h-[3px] w-[5px] bg-white"></div>
             <div className="flex">
                 <h2 className="min-w-[24.5rem] px-[2.3rem] text-[2.2rem] font-semibold leading-8">
                     Scheduled Tasks & Meetings

@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // Page imports
-import { LoginPage, SignupPage, Dashboard } from "./pages/index";
+import { LoginPage, SignupPage, Dashboard, Projects } from "./pages/index";
 
 function App() {
     return (
@@ -20,6 +20,7 @@ function App() {
                     <Route exact path="/login" element={<LoginPage />} />
                     <Route exact path="/register" element={<SignupPage />} />
                     <Route exact path="/dashboard" element={<Dashboard />} />
+                    <Route exact path="/projects" element={<Projects />} />
                 </Routes>
             </Router>
         </div>
