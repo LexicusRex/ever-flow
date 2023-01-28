@@ -1,6 +1,6 @@
 function TaskStatCard({ counter, subtitle, stats, color }) {
     return (
-        <div className="m-[1.3rem] flex h-[16.5rem] w-[27rem] flex-col items-center justify-center rounded-[16.5px] bg-[#fef3fb] shadow-md">
+        <div className="m-[1.3rem] flex h-[16.5rem] w-[25rem] flex-col items-center justify-center rounded-[16.5px] bg-[#fef3fb] shadow-md">
             <p id="card-counter" className="h-6rem text-[3.8rem] font-medium">
                 {counter}
             </p>
