@@ -49,13 +49,15 @@ function Dashboard({ loginStatus, handleLogout }) {
                 <div className="mx-auto flex max-w-[160rem]">
                     <TaskOverview />
                     <Calendar
-                        className=""
+                        className="relative"
                         value={selectedDay}
                         onChange={setSelectedDay}
                         shouldHighlightWeekends
+                        colorPrimary={"#F06680"}
+                        calendarClassName="responsive-calendar"
                     />
                 </div>
-                <div className=" mx-auto flex h-[20rem] max-w-[160rem]">
+                <div className="mx-auto flex h-[20rem] max-w-[160rem]">
                     <MountainProgressView />
                     <NewTaskView />
                 </div>
