@@ -24,7 +24,22 @@ function TaskOverview() {
     };
 
     return (
-        <div className="mx-[2rem] my-[1.5rem] max-w-[122rem] rounded-xl bg-white p-[1.5rem]">
+        <div
+            // max-w-[122rem]
+            // h-full
+            // w-full
+            className="
+                mx-[2rem]
+                my-[1.5rem] 
+                h-full
+                max-w-[122rem]
+                rounded-xl
+                bg-white
+                py-[1.5rem]
+                px-[1.4rem]
+                shadow
+            "
+        >
             <div className="flex p-[1.3rem]">
                 <h2 className="text-[3rem] font-semibold leading-[4.5rem]">
                     Overview
@@ -57,7 +72,7 @@ function TaskOverview() {
             </div>
             <div
                 id="task-tile-group"
-                className="flex flex-wrap items-center justify-center"
+                className="flex flex-wrap items-center justify-evenly"
             >
                 <TaskStatCard {...taskStat1} />
                 <TaskStatCard {...taskStat2} />
