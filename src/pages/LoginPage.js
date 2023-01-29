@@ -4,6 +4,7 @@ import React from "react";
 import logo from "../assets/images/logo-left.svg";
 import "../assets/styles/LoginPage.css";
 import pb from "lib/pocketbase";
+import { Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Dashboard from "./Dashboard";
 import useLogout from "hooks/useLogout";
@@ -15,8 +16,6 @@ function LoginPage() {
     const logout = useLogout();
     const { register, handleSubmit, reset } = useForm();
 
-    const isLoggedIn = pb.authStore.isValid;
-
     async function onSubmit(data) {
         login({ email: data.email, password: data.password });
         if (!isError) {
@@ -24,12 +23,8 @@ function LoginPage() {
         }
     }
 
-    if (isLoggedIn) {
-        return (
-            <div>
-                <Dashboard loginStatus={isLoggedIn} handleLogout={logout} />
-            </div>
-        );
+    if (pb.authStore.isValid) {
+        return <Dashboard handleLogout={logout} />;
     }
 
     return (

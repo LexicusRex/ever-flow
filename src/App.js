@@ -16,16 +16,9 @@ import {
     CoursesPage,
 } from "./pages/index";
 
-import AuthenticatedRoute from "components/authentication/AuthenticatedRoute";
+import ProtectedRoute from "components/authentication/ProtectedRoute";
 
-function App({ loginStatus }) {
-    // State management for user login
-    const [isAuthenticated, userHasAuthenticated] = useState(false);
-
-    const authDashboard = () => {
-        return isAuthenticated ? <Dashboard /> : <Navigate to="/login" />;
-    };
-
+function App() {
     return (
         <div>
             <link
@@ -43,13 +36,11 @@ function App({ loginStatus }) {
                     <Route
                         exact
                         path="/dashboard"
-                        element={() => {
-                            return isAuthenticated ? (
+                        element={
+                            <ProtectedRoute>
                                 <Dashboard />
-                            ) : (
-                                <Navigate to="/login" />
-                            );
-                        }}
+                            </ProtectedRoute>
+                        }
                     />
 
                     <Route exact path="/projects" element={<Projects />} />
