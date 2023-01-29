@@ -58,7 +58,7 @@ function NewTaskView() {
                 "bg-white",
                 "rounded-[1rem]",
                 "py-[2.3rem]",
-                "mx-[2rem]",
+                "mx-[1rem]",
                 "shadow"
                 // "my-[1.5rem]"
             )}

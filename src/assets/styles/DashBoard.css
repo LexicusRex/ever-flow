@@ -1,0 +1,4 @@
+.my-custom-input {
+    /* by setting font-size, all the elements will correspond */
+    font-size: 3px !important; /* default to 10px */
+}

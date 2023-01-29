@@ -29,7 +29,7 @@ function TaskOverview() {
             // h-full
             // w-full
             className="
-                mx-[2rem]
+                mx-[2.5rem]
                 my-[1.5rem] 
                 h-full
                 max-w-[122rem]

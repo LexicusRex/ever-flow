@@ -1,10 +1,14 @@
 import pb from "lib/pocketbase";
 import { usePocketbase } from "hooks/usePocketbase";
-import React from "react";
+import React, { useState } from "react";
 import TaskView from "components/TaskView";
 import NewTaskView from "components/NewTaskView";
 import MenuBar from "components/MenuBar";
 import TaskOverview from "components/TaskOverview";
+import "react-modern-calendar-datepicker/lib/DatePicker.css";
+import { Calendar } from "react-modern-calendar-datepicker";
+import MountainProgressView from "components/MountainProgressView";
+import "../assets/styles/DashBoard.css";
 
 function Dashboard({ loginStatus, handleLogout }) {
     // function Dashboard() {
@@ -26,6 +30,7 @@ function Dashboard({ loginStatus, handleLogout }) {
 
     //     loadData();
     // }, []);
+    const [selectedDay, setSelectedDay] = useState(null);
 
     return (
         <div className="flex h-full">
@@ -65,14 +70,29 @@ function Dashboard({ loginStatus, handleLogout }) {
                         </button>
                     </div>
                 </div>
-                <div className="grid grid-flow-col py-[1.5rem]">
+
+                <div className="w-fit">
+                    <div className="mx-auto flex max-w-[160rem]">
+                        <TaskOverview />
+                        <Calendar
+                            value={selectedDay}
+                            onChange={setSelectedDay}
+                            shouldHighlightWeekends
+                        />
+                    </div>
+                    <div className="mx-auto flex max-w-[160rem]">
+                        <MountainProgressView />
+                        <NewTaskView />
+                    </div>
+                </div>
+                {/* <div className="grid grid-flow-col py-[1.5rem]">
                     <TaskOverview />
                     <div className="mx-[2rem] my-[1.5rem] h-[100%] w-[313px] rounded-[10px] bg-white shadow"></div>
                 </div>
                 <div className="grid grid-flow-col pt-[3rem] pb-[2rem]">
                     <div className="mx-[2rem] h-full w-[400px] rounded-[10px] bg-white shadow"></div>
                     <NewTaskView />
-                </div>
+                </div> */}
             </div>
         </div>
     );
