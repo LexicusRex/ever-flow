@@ -11,12 +11,15 @@ export default function MountainProgressView() {
         "absolute ml-[2.5rem] text-[2rem] text-[#414141] font-semibold z-10";
 
     // const movement = "bottom-[-0.5rem] left-[9.5rem]";
+    // bottom-[${factor * steps - 0.5}rem]
+    // left-[${steps + 9.5}rem]
     const factor = 280 / 206;
-    let steps = 20;
-    const movement = `
+    let steps = 1;
+    const movement = `    
         absolute
-        bottom-[${factor * steps - 0.5}rem] 
-        left-[${steps + 9.5}rem]`;
+        bottom-[${factor * steps - 0.5}rem]
+        left-[${steps + 9.5}rem]
+        `;
 
     return (
         <div
@@ -27,7 +30,7 @@ export default function MountainProgressView() {
                 "rounded-[1rem]",
                 "py-[2.3rem]",
                 "mx-[2.5rem]",
-                "drop-shadow"
+                "shadow"
             )}
         >
             {/* <div className="mx-auto w-[95%]"> */}
@@ -50,9 +53,7 @@ export default function MountainProgressView() {
                     className="mx-auto mt-[1rem] h-full w-[95%] bg-cover "
                     src={mountain}
                 />
-                <div>
-                    <img src={person} alt="person" className={movement} />
-                </div>
+                <img src={person} alt="person" className={movement} />
             </div>
         </div>
     );

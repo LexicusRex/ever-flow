@@ -8,6 +8,7 @@ import TaskOverview from "components/TaskOverview";
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
 import { Calendar } from "react-modern-calendar-datepicker";
 import MountainProgressView from "components/MountainProgressView";
+import "../assets/styles/DashBoard.css";
 
 function Dashboard({ loginStatus, handleLogout }) {
     // function Dashboard() {
@@ -71,7 +72,7 @@ function Dashboard({ loginStatus, handleLogout }) {
                 </div>
 
                 <div className="w-fit">
-                    <div className="mx-auto flex max-w-[190rem]">
+                    <div className="mx-auto flex max-w-[160rem]">
                         <TaskOverview />
                         <Calendar
                             value={selectedDay}
@@ -79,7 +80,7 @@ function Dashboard({ loginStatus, handleLogout }) {
                             shouldHighlightWeekends
                         />
                     </div>
-                    <div className=" flex max-w-[160rem]">
+                    <div className="mx-auto flex max-w-[160rem]">
                         <MountainProgressView />
                         <NewTaskView />
                     </div>
