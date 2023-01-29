@@ -28,9 +28,9 @@ function TaskOverview() {
             // max-w-[122rem]
             // h-full
             // w-full
+            // mx-[2.5rem]
+            // my-[1.5rem]
             className="
-                mx-[2.5rem]
-                my-[1.5rem] 
                 h-full
                 max-w-[122rem]
                 rounded-xl
@@ -40,7 +40,6 @@ function TaskOverview() {
                 shadow
             "
         >
-            <div className="mx-[57rem] h-[3px] w-[5px] bg-white"></div>
             <div className="flex p-[1.3rem]">
                 <h2 className="text-[3rem] font-semibold leading-[4.5rem]">
                     Overview
