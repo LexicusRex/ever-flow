@@ -1,0 +1,55 @@
+.right-mountain {
+    width: 50%;
+    height: 90%;
+    background: #424975;
+    position: absolute;
+    transform: skew(0deg, 54deg);
+    z-index: 2;
+    margin-top: 100px;
+    left: 345px;
+    top: 100px;
+}
+
+.left-mountain {
+    width: 55%;
+    height: 90%;
+    background: #363b5b;
+    position: absolute;
+    transform: skew(0deg, -54deg);
+    z-index: 3;
+    margin-top: 100px;
+    left: 140px;
+    top: 110px;
+}
+
+.left-mountain.fin > #mount-path {
+    transform: skew(0deg, 54deg);
+}
+
+.left-mountain.fin > #mount-path > img {
+    transform: skew(0deg, 0deg);
+    bottom: 15rem;
+}
+
+.left-mountain > #mount-path > img {
+    transform: skew(0deg, 54deg);
+}
+
+.flag-pole {
+    transform: rotate(-3deg);
+    position: absolute;
+    width: 2px;
+    height: 55px;
+    background: #000;
+    left: 343px;
+    top: 15px;
+}
+
+#flag {
+    transform: rotate(-3deg);
+    position: absolute;
+    width: 27.5px;
+    height: 17.5px;
+    left: 345px;
+    top: 20px;
+}

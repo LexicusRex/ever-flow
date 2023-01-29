@@ -1,7 +1,8 @@
 import React from "react";
 import clsx from "clsx";
-import mountain from "../assets/images/mountain.png";
+import mountain from "../assets/images/mountain2.png";
 import person from "../assets/images/person.png";
+import "../assets/styles/MountainProgressTracker.css";
 
 export default function MountainProgressView() {
     const textTW = "absolute ml-[3rem] text-[1rem] text-[#414141] z-10";
@@ -10,17 +11,12 @@ export default function MountainProgressView() {
     const title =
         "absolute ml-[2.5rem] text-[2rem] text-[#414141] font-semibold z-10";
 
-    // const movement = "bottom-[-0.5rem] left-[9.5rem]";
-    // bottom-[${factor * steps - 0.5}rem]
-    // left-[${steps + 9.5}rem]
-    const factor = 280 / 206;
-    let steps = 1;
-    const movement = `    
-        absolute
-        bottom-[${factor * steps - 0.5}rem]
-        left-[${steps + 9.5}rem]
-        `;
-
+    const progress = 100 - 15;
+    const isFinished = progress >= 85;
+    const mountProgress = {
+        left: progress.toString() + "%",
+        rotate: isFinished && "45deg",
+    };
     return (
         <div
             className={clsx(
@@ -29,7 +25,7 @@ export default function MountainProgressView() {
                 "bg-white",
                 "rounded-[1rem]",
                 "py-[2.3rem]",
-                "mx-[2.5rem]",
+                // "mx-[2.5rem]",
                 "shadow"
             )}
         >
@@ -48,12 +44,35 @@ export default function MountainProgressView() {
                 Keep Going, You're Almost Up to Date!
             </div>
 
-            <div className="relative z-0 h-full w-full">
+            <div className="relative h-full w-full overflow-hidden">
+                <div className={`left-mountain ${isFinished && "fin"}`}>
+                    <div id="mount-path" className="relative h-[30px] w-full">
+                        <img
+                            src={person}
+                            alt="person"
+                            style={mountProgress}
+                            className={`
+                                absolute
+                                bottom-10
+                            `}
+                        />
+                    </div>
+                </div>
+                <div className="flag-group">
+                    <div className="flag-pole"></div>
+                    <div
+                        id="flag"
+                        className={`${
+                            isFinished ? "bg-green-300" : "bg-red-400"
+                        }`}
+                    ></div>
+                </div>
+                <div className="right-mountain"></div>
                 <img
-                    className="mx-auto mt-[1rem] h-full w-[95%] bg-cover "
+                    className="mx-auto mt-[1rem] h-full w-[95%] object-cover "
                     src={mountain}
+                    alt="mountain"
                 />
-                <img src={person} alt="person" className={movement} />
             </div>
         </div>
     );
