@@ -120,7 +120,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 -   [x] Log-in
 -   [x] Sign-up
--   [ ] Dashboard
+-   [ ] Dashboard (WIP)
 -   [ ] View projects
 -   [ ] View tasks
 -   [ ] Task Creation
@@ -175,7 +175,8 @@ This project uses the following open source modules:
 -   [react-hook-form](https://github.com/react-hook-form/react-hook-form)
 -   [react-icons](https://github.com/react-icons/react-icons)
 -   [react-query](https://github.com/TanStack/query)
--   [reacter-router-dom](https://github.com/remix-run/react-router)
+-   [react-router-dom](https://github.com/remix-run/react-router)
+-   [react-modern-calendar-datepicker](https://github.com/Kiarash-Z/react-modern-calendar-datepicker)
 
 <!-- MARKDOWN LINKS -->
 
