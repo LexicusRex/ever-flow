@@ -31,8 +31,7 @@ function Dashboard({ loginStatus, handleLogout }) {
                         <div className="px-[2rem] ">
                             <h1 className="text-[3.2rem] font-semibold leading-[2.6rem]">
                                 Welcome back{" "}
-                                {loginStatus &&
-                                    `${pb.authStore.model.name.split(" ")[0]}!`}
+                                {`${pb.authStore.model.name.split(" ")[0]}!`}
                             </h1>
                             <p className="pt-[1rem] text-[2rem]">
                                 {new Date(Date.now()).toLocaleDateString(
