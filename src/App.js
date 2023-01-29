@@ -43,7 +43,15 @@ function App() {
                         }
                     />
 
-                    <Route exact path="/projects" element={<Projects />} />
+                    <Route
+                        exact
+                        path="/projects"
+                        element={
+                            <ProtectedRoute>
+                                <Projects />
+                            </ProtectedRoute>
+                        }
+                    />
                     <Route exact path="/courses" element={<CoursesPage />} />
                 </Routes>
             </Router>

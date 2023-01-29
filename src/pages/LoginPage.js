@@ -4,13 +4,17 @@ import React from "react";
 import logo from "../assets/images/logo-left.svg";
 import "../assets/styles/LoginPage.css";
 import pb from "lib/pocketbase";
-import { Navigate } from "react-router-dom";
+import { useNavigate, Router } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Dashboard from "./Dashboard";
 import useLogout from "hooks/useLogout";
 import useLogin from "hooks/useLogin";
 
 function LoginPage() {
+    const history = useNavigate();
+    const navigate = (path) => {
+        history(path);
+    };
     const { mutate: login, isLoading, isError } = useLogin();
 
     const logout = useLogout();
@@ -21,11 +25,12 @@ function LoginPage() {
         if (!isError) {
             reset();
         }
+        return navigate("/dashboard");
     }
 
-    if (pb.authStore.isValid) {
-        return <Dashboard handleLogout={logout} />;
-    }
+    // if (pb.authStore.isValid) {
+    //     return <Dashboard handleLogout={logout} />;
+    // }
 
     return (
         <div className="h-screen w-screen lg:grid lg:grid-cols-2">
