@@ -1,4 +1,3 @@
-import React, { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 function MenuItem({ itemType, itemName, focusedItem }) {
@@ -11,26 +10,22 @@ function MenuItem({ itemType, itemName, focusedItem }) {
     };
     const navigate = useNavigate();
     return (
-        <a
+        <div
             className={`py-[14px] ${
                 itemName === focusedItem && "bg-focus-accent"
             } ${
                 itemName !== focusedItem && "hover:bg-mild-accent"
             } mb-[12px] w-full cursor-pointer rounded-[1rem]`}
+            onClick={() =>
+                navigate(`/${itemName.toLowerCase()}`, {
+                    replace: true,
+                })
+            }
         >
-            <p
-                className="ml-[45px] mb-0 align-middle text-[1.8rem] leading-[2.4rem] "
-                onClick={useCallback(
-                    () =>
-                        navigate(`/${itemName.toLowerCase()}`, {
-                            replace: true,
-                        }),
-                    [navigate]
-                )}
-            >
+            <p className="ml-[45px] mb-0 align-middle text-[1.8rem] leading-[2.4rem] ">
                 {itemName}
             </p>
-        </a>
+        </div>
     );
 }
 export default MenuItem;
