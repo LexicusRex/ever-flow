@@ -17,6 +17,7 @@ import {
 } from "./pages/index";
 
 import ProtectedRoute from "components/authentication/ProtectedRoute";
+import Layout from "components/Layout";
 
 function App() {
     return (
@@ -27,9 +28,23 @@ function App() {
                 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
                 crossOrigin="anonymous"
             ></link>
-            <Router>
-                <Routes>
-                    <Route exact path="/" element={<LoginPage />} />
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route exact path="/login" element={<LoginPage />} />
+                    <Route exact path="/register" element={<SignupPage />} />
+
+                    {/* Protected routes */}
+                    <Route element={<ProtectedRoute />}>
+                        <Route
+                            exact
+                            path="/dashboard"
+                            element={<Dashboard />}
+                        />
+                        <Route exact path="/projects" element={<Projects />} />
+                    </Route>
+                    {/* <Route path="*" element={<Missing />} /> */}
+                </Route>
+                {/* <Route exact path="/" element={<LoginPage />} />
                     <Route exact path="/login" element={<LoginPage />} />
 
                     <Route exact path="/register" element={<SignupPage />} />
@@ -52,9 +67,8 @@ function App() {
                             </ProtectedRoute>
                         }
                     />
-                    <Route exact path="/courses" element={<CoursesPage />} />
-                </Routes>
-            </Router>
+                    <Route exact path="/courses" element={<CoursesPage />} /> */}
+            </Routes>
         </div>
     );
 }

@@ -66,7 +66,7 @@ function TaskCard({ priority, title, info, startDate, dueDate, assignee }) {
                     </div>
                     {/* TODO - settings */}
                 </div>
-                <div id="task-text" className="py-[1.5rem]">
+                <div id="task-text" className="py-[1.5rem] text-left">
                     <div
                         id="task-title"
                         className={`${taskInfoStyles} mb-[4px] text-[2rem] font-semibold ${lineHeight}`}

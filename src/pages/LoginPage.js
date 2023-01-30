@@ -4,33 +4,47 @@ import React from "react";
 import logo from "../assets/images/logo-left.svg";
 import "../assets/styles/LoginPage.css";
 import pb from "lib/pocketbase";
-import { useNavigate, Router } from "react-router-dom";
+import { Link, useNavigate, useLocation, Router } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Dashboard from "./Dashboard";
 import useLogout from "hooks/useLogout";
 import useLogin from "hooks/useLogin";
+import { useEffect } from "react";
 
 function LoginPage() {
-    const history = useNavigate();
-    const navigate = (path) => {
-        history(path);
-    };
+    // const history = useNavigate();
+    // const navigate = (path) => {
+    //     history(path);
+    // };
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/dashboard";
+
     const { mutate: login, isLoading, isError } = useLogin();
 
-    const logout = useLogout();
     const { register, handleSubmit, reset } = useForm();
+    const user = pb.authStore.isValid;
+    // async function onSubmit(data) {
+    //     try {
+    //         login({ email: data.email, password: data.password });
+    //     } catch (isError) {}
+    //     // return navigate("/dashboard");
+    // }
 
-    async function onSubmit(data) {
+    const onLogin = async (data) => {
         login({ email: data.email, password: data.password });
         if (!isError) {
             reset();
         }
-        return navigate("/dashboard");
-    }
+    };
 
-    // if (pb.authStore.isValid) {
-    //     return <Dashboard handleLogout={logout} />;
-    // }
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true });
+        }
+    }, [navigate, user, from]);
 
     return (
         <div className="h-screen w-screen lg:grid lg:grid-cols-2">
@@ -73,7 +87,7 @@ function LoginPage() {
                 {/* Log in form */}
                 <form
                     className="login-form max-w-[70vw]"
-                    onSubmit={handleSubmit(onSubmit)}
+                    onSubmit={handleSubmit(onLogin)}
                 >
                     <input
                         className="mt-[6rem] w-full border-b-2 border-[#d8d8d8] text-[1.6rem] text-[#b4b4b4] outline-none"

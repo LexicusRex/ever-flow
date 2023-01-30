@@ -20,7 +20,7 @@ function MenuBar({ itemFocus }) {
 
             <div
                 // id="menu"
-                className="fixed h-[100vh] w-[280px] border-[1px] bg-white px-[17px]"
+                className="fixed h-[100vh] w-[280px] border-[1px] bg-white px-[17px] text-left"
             >
                 {/* <div> */}
                 <div
