@@ -10,13 +10,20 @@ import { Calendar } from "react-modern-calendar-datepicker";
 import MountainProgressView from "components/MountainProgressView";
 import "../assets/styles/DashBoard.css";
 import LoginPage from "./LoginPage";
+import useLogout from "hooks/useLogout";
+import { useNavigate } from "react-router-dom";
 
-function Dashboard({ loginStatus, handleLogout }) {
-    // function Dashboard() {
+function Dashboard() {
     const [selectedDay, setSelectedDay] = useState(null);
     const formatInputValue = () => {
         if (!selectedDay) return "";
         return `Day: ${selectedDay.day}`;
+    };
+    const navigate = useNavigate();
+    const logout = useLogout();
+    const handleLogout = async () => {
+        logout();
+        navigate("/login");
     };
 
     return (
@@ -31,7 +38,8 @@ function Dashboard({ loginStatus, handleLogout }) {
                         <div className="px-[2rem] ">
                             <h1 className="text-[3.2rem] font-semibold leading-[2.6rem]">
                                 Welcome back{" "}
-                                {`${pb.authStore.model.name.split(" ")[0]}!`}
+                                {pb.authStore.isValid &&
+                                    `${pb.authStore.model.name.split(" ")[0]}!`}
                             </h1>
                             <p className="pt-[1rem] text-[2rem]">
                                 {new Date(Date.now()).toLocaleDateString(
