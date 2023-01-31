@@ -35,12 +35,9 @@ function App() {
 
                     {/* Protected routes */}
                     <Route element={<ProtectedRoute />}>
-                        <Route
-                            exact
-                            path="/dashboard"
-                            element={<Dashboard />}
-                        />
-                        <Route exact path="/projects" element={<Projects />} />
+                        <Route path="/dashboard" element={<Dashboard />} />
+                        <Route path="/courses" element={<CoursesPage />} />
+                        <Route path="/projects" element={<Projects />} />
                     </Route>
                     {/* <Route path="*" element={<Missing />} /> */}
                 </Route>

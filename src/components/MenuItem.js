@@ -16,11 +16,7 @@ function MenuItem({ itemType, itemName, focusedItem }) {
             } ${
                 itemName !== focusedItem && "hover:bg-mild-accent"
             } mb-[12px] w-full cursor-pointer rounded-[1rem]`}
-            onClick={() =>
-                navigate(`/${itemName.toLowerCase()}`, {
-                    replace: true,
-                })
-            }
+            onClick={() => navigate(`/${itemName.toLowerCase()}`)}
         >
             <p className="ml-[45px] mb-0 align-middle text-[1.8rem] leading-[2.4rem] ">
                 {itemName}

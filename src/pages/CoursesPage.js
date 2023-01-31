@@ -1,10 +1,12 @@
 import React from "react";
 import AuthWrap from "components/authentication/ProtectedRoute";
+import MenuBar from "components/MenuBar";
 
 export default function CoursesPage() {
     return (
-        <AuthWrap>
+        <div>
+            <MenuBar itemFocus={"Courses"} />
             <div>CoursesPaasdasdge</div>;
-        </AuthWrap>
+        </div>
     );
 }
