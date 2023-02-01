@@ -19,14 +19,13 @@ export default function SearchBox() {
                 color="#8A8A8A"
                 className="absolute mt-[0.4rem] ml-[1rem] scale-x-[-1]"
             />
-            <div className="flex min-w-[25rem] max-w-[40rem] flex-col">
+            <div className="flex w-[25rem] flex-col">
                 <input
                     style={BarStyle}
                     key="search-bar"
                     placeholder={"Search"}
                     className="flex"
                 />
-                <div className="mx-[15rem] h-[5px] w-[5px] bg-red-500"></div>
             </div>
         </div>
     );
