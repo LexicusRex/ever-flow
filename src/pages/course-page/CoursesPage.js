@@ -9,7 +9,7 @@ export default function CoursesPage() {
         <div className="flex h-screen">
             <MenuBar itemFocus={"Courses"} />
             <div className="h-screen min-w-[32rem]" />
-            <div className="flex w-screen max-w-[160rem] flex-col">
+            <div className="flex w-screen max-w-[150rem] flex-col">
                 <div className="flex flex-row pt-[7.5rem]">
                     <div className="text-[3rem] font-semibold">My Courses</div>
                     <div className="ml-auto mt-[0.5rem] pr-[2rem]">
@@ -17,9 +17,13 @@ export default function CoursesPage() {
                     </div>
                     <div className="h-[40px] w-[40px] rounded-[100px] bg-[#F06680]" />
                 </div>
-
-                <div className="py-[4rem]">
-                    <CourseView />
+                {/* Current Course View */}
+                <div className="pt-[4rem]">
+                    <CourseView title={"Current Courses"} />
+                </div>
+                {/* Past Course View */}
+                <div className="pt-[2rem]">
+                    <CourseView title={"Past Courses"} />
                 </div>
             </div>
         </div>
