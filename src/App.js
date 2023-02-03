@@ -12,7 +12,7 @@ import {
     LoginPage,
     SignupPage,
     Dashboard,
-    Projects,
+    ProjectsPage,
     CoursesPage,
 } from "./pages/index";
 
@@ -37,7 +37,7 @@ function App() {
                     <Route element={<ProtectedRoute />}>
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/courses" element={<CoursesPage />} />
-                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/projects" element={<ProjectsPage />} />
                     </Route>
                     {/* <Route path="*" element={<Missing />} /> */}
                 </Route>

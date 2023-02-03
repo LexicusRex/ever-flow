@@ -2,6 +2,7 @@ import MenuBar from "components/MenuBar";
 import TaskBranch from "./TaskBranch";
 import { useQuery } from "react-query";
 import { usePocketbase } from "hooks/usePocketbase";
+import clsx from "clsx";
 
 function ProjectTaskBoard() {
     const { getTasks } = usePocketbase();
@@ -43,20 +44,35 @@ function ProjectTaskBoard() {
             // h-[82.5rem]
             // px-[1.8rem]
             // w-[118.5rem]
-            className="
-                grid
-                h-fit
-                max-h-[82.5rem]
-                w-[118.5rem]
-                justify-items-center
-                overflow-auto
-                rounded-t-[10px]
-                bg-[#eceff1]
-                pb-[2.5rem]
-                sm:grid-cols-2
-                md:grid-cols-3
-                lg:grid-cols-4
-            "
+            className={clsx(
+                "flex",
+                "flex-wrap",
+                "h-fit",
+                // "max-h-[82.5rem]",
+                // "h-full",
+                // "w-[120rem]",
+                "w-full",
+                "justify-around",
+                "overflow-auto",
+                "rounded-t-[10px]",
+                "bg-[#eceff1]",
+                "pb-[2.5rem]",
+                "px-[2.5rem]"
+            )}
+            // className={clsx(
+            //     "grid",
+            //     "h-fit",
+            //     "max-h-[82.5rem]",
+            //     "w-full",
+            //     "justify-items-center",
+            //     "overflow-auto",
+            //     "rounded-t-[10px]",
+            //     "bg-[#eceff1]",
+            //     "pb-[2.5rem]",
+            //     "sm:grid-cols-2",
+            //     "md:grid-cols-3",
+            //     "lg:grid-cols-4"
+            // )}
             // className="
             //     flex
             //     h-fit

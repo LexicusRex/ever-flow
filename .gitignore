@@ -17,6 +17,7 @@ pocketbase-db/pb_data/data.db-shm
 pocketbase-db/pb_data/data.db-wal
 pocketbase-db/pb_data/logs.db-shm
 pocketbase-db/pb_data/logs.db-wal
+pocketbase-db/pb_data/logs.db
 
 # misc
 .DS_Store
