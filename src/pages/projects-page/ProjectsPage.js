@@ -4,8 +4,13 @@ import ProjectsOverview from "./components/ProjectsOverview";
 import PageHeading from "components/PageHeading";
 import PageOverview from "components/PageOverview";
 import ProjectCard from "./components/ProjectCard";
+import { useState } from "react";
+import ProjectTasksPage from "./ProjectTasksPage";
 
-function Projects() {
+function ProjectsPage() {
+    const [isDisplayProject, setDisplayProject] = useState(false);
+    const [projectProps, setProjectProps] = useState({});
+
     const pageTitle = "Projects";
 
     const test1 = {
@@ -20,7 +25,13 @@ function Projects() {
     };
 
     const projects = [
-        <ProjectCard key={"a"} progress={20} {...test1} />,
+        <ProjectCard
+            key={"a"}
+            progress={20}
+            {...test1}
+            setOpenProject={setDisplayProject}
+            setOpenProps={setProjectProps}
+        />,
         <ProjectCard key={"b"} progress={30} {...test1} />,
         <ProjectCard key={"c"} progress={40} {...test1} />,
         <ProjectCard key={"d"} progress={50} {...test1} />,
@@ -30,12 +41,16 @@ function Projects() {
         // <ProjectCard key={} progress={90} status={"Done"} />,
         // <ProjectCard key={} progress={100} />,
     ];
+
+    if (isDisplayProject) {
+        return <ProjectTasksPage {...projectProps} />;
+    }
     return (
         <div className="flex h-screen">
             <MenuBar itemFocus={pageTitle} />
             <div className="h-screen min-w-[28rem]"></div>
             <div className="flex w-full flex-col">
-                <PageHeading pageTitle={pageTitle} />
+                <PageHeading hasMyHeader={true} pageTitle={pageTitle} />
                 <PageOverview overviewTitle={pageTitle} cardList={projects} />
             </div>
             {/* <ProjectsOverview /> */}
@@ -43,4 +58,4 @@ function Projects() {
         </div>
     );
 }
-export default Projects;
+export default ProjectsPage;
