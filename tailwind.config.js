@@ -14,6 +14,9 @@ module.exports = {
                 "semi-accent": "var(--accent-semi-color)",
                 secondary: "var(--text-secondary-color)",
             },
+            screens: {
+                '3xl': "1600px",
+            },
         },
     },
     plugins: [],
