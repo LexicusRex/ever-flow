@@ -13,7 +13,7 @@ const PageOverview = ({ overviewTitle, cardList }) => {
         status: "Up to Date",
     };
     return (
-        <div className="py-[5.5rem] pr-[5.5rem] pl-[4.7rem]">
+        <div className="py-[5.5rem] px-[4.5rem]">
             <div className="flex w-full items-center justify-between">
                 <div className="text-[2.5rem] font-semibold">
                     {overviewTitle} Overview
