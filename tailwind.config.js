@@ -13,9 +13,10 @@ module.exports = {
                 "focus-accent": "var(--accent-focus-color)",
                 "semi-accent": "var(--accent-semi-color)",
                 secondary: "var(--text-secondary-color)",
+                tertiary: "var(--text-tertiary-color)",
             },
             screens: {
-                '3xl': "1600px",
+                "3xl": "1600px",
             },
         },
     },
