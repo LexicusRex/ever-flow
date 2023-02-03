@@ -48,13 +48,16 @@ function ProjectTaskBoard() {
                 "flex",
                 "flex-wrap",
                 "h-fit",
-                "max-h-[82.5rem]",
-                "w-[120rem]",
+                // "max-h-[82.5rem]",
+                // "h-full",
+                // "w-[120rem]",
+                "w-full",
                 "justify-around",
                 "overflow-auto",
                 "rounded-t-[10px]",
                 "bg-[#eceff1]",
-                "pb-[2.5rem]"
+                "pb-[2.5rem]",
+                "px-[2.5rem]"
             )}
             // className={clsx(
             //     "grid",
