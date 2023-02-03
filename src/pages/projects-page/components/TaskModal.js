@@ -40,7 +40,7 @@ function TaskModal({
     }
 
     return (
-        <div className="absolute top-0 left-0 flex h-screen w-screen items-center justify-center bg-[#0000007f]">
+        <div className="absolute top-0 left-0 z-20 flex h-screen w-screen items-center justify-center bg-[#0000007f]">
             <div className="h-fit max-h-[75vh] min-h-[50vh] w-[85vw] cursor-default rounded-[2rem] bg-white p-[2.3rem] shadow lg:w-[50vw]">
                 <div
                     className="float-right rotate-45 cursor-pointer text-5xl"
