@@ -1,6 +1,7 @@
 import Avatar from "components/Avatar";
 
 const ProjectCard = ({
+    projectId,
     project,
     course,
     status,
@@ -10,10 +11,19 @@ const ProjectCard = ({
     meetingCount,
     members,
     dueDate,
+    setOpenProject,
+    setOpenProps,
 }) => {
     const lineHeight = "leading-[26px]";
+
     return (
-        <div className="flex h-[36.5rem] w-[45rem] grow cursor-pointer flex-col rounded-[1rem] bg-white px-[2.4rem] py-[2rem] text-left shadow-md hover:shadow-lg hover:shadow-focus-accent">
+        <div
+            onClick={() => {
+                setOpenProject(true);
+                setOpenProps({ project });
+            }}
+            className="flex h-[36.5rem] w-[45rem] grow cursor-pointer flex-col rounded-[1rem] bg-white px-[2.4rem] py-[2rem] text-left shadow-md hover:shadow-lg hover:shadow-focus-accent"
+        >
             <div
                 className={`flex justify-between text-[2rem] font-semibold ${lineHeight}`}
             >
