@@ -10,7 +10,7 @@ function MenuBar({ itemFocus }) {
     };
 
     return (
-        <div className="z-50">
+        <div className="z-10">
             {/* <button
                 className={`hamburger ${toggleMenu && "is-active"}`}
                 onClick={handleMenuToggle}
