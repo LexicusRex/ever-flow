@@ -13,7 +13,7 @@ export default function SearchBox() {
     };
 
     return (
-        <div className="flex">
+        <div className="mx-[1.5rem] flex">
             <BiSearchAlt
                 size={25}
                 color="#8A8A8A"
