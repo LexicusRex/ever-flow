@@ -27,7 +27,7 @@ const PageOverview = ({ overviewTitle, cardList }) => {
                 </div>
             </div>
 
-            <div className="flex flex-wrap justify-between gap-x-[4rem] gap-y-[5.5rem] pt-[4rem]">
+            <div className="flex flex-wrap justify-center gap-x-[4rem] gap-y-[5.5rem] pt-[4rem]">
                 {cardList}
             </div>
         </div>

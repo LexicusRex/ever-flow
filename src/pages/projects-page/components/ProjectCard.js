@@ -22,7 +22,7 @@ const ProjectCard = ({
                 setOpenProject(true);
                 setOpenProps({ project });
             }}
-            className="flex h-[36.5rem] w-[45rem] grow cursor-pointer flex-col rounded-[1rem] bg-white px-[2.4rem] py-[2rem] text-left shadow-md hover:shadow-lg hover:shadow-focus-accent"
+            className="flex h-[36.5rem] min-w-[40rem] max-w-[60rem] grow basis-1/4 cursor-pointer flex-col rounded-[1rem] bg-white px-[2.4rem] py-[2rem] text-left shadow-md hover:shadow-lg hover:shadow-focus-accent"
         >
             <div
                 className={`flex justify-between text-[2rem] font-semibold ${lineHeight}`}
@@ -40,7 +40,7 @@ const ProjectCard = ({
                 {course}
             </div>
             <div
-                className={`mr-[2.6rem] h-[11rem] pt-[7px] text-[1.2rem] ${lineHeight} text-tertiary`}
+                className={`mr-[2.6rem] h-[11rem] overflow-y-hidden pt-[7px] text-[1.2rem] ${lineHeight} text-tertiary`}
             >
                 {description}
             </div>
