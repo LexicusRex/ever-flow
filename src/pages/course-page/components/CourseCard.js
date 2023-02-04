@@ -15,11 +15,13 @@ export default function CourseCard({
         <div
             className={`
             flex
-            h-[30rem] 
-            w-[45rem] 
+            h-[30rem]
+            w-[45rem]
             justify-center 
             rounded-lg 
-            shadow
+            shadow-md
+            hover:shadow-lg
+            hover:shadow-focus-accent
         `}
         >
             <div>
@@ -27,7 +29,7 @@ export default function CourseCard({
                     <img
                         src={courseImg}
                         alt="img"
-                        className="h-[19rem] w-[42.5rem]"
+                        className="h-[19rem] w-fit px-[1rem]"
                     />
                 </div>
                 <div className="px-[1rem]">
