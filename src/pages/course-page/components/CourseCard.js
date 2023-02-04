@@ -16,11 +16,12 @@ export default function CourseCard({
             className={`
             flex
             h-[30rem]
-            min-w-[40rem] 
-            max-w-[43rem] 
+            w-[45rem]
             justify-center 
             rounded-lg 
-            shadow
+            shadow-md
+            hover:shadow-lg
+            hover:shadow-focus-accent
         `}
         >
             <div>

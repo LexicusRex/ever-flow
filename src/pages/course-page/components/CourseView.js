@@ -13,10 +13,10 @@ export default function CourseView({ title }) {
         status: "Up to Date",
     };
     return (
-        <div className="px-[4.5rem] text-left">
-            <div className="flex">
-                <div className="text-[2.6rem] font-semibold">{title}</div>
-                <div className="ml-auto flex gap-[2rem] pt-[0.6rem]">
+        <div className="py-[2rem] px-[4.5rem]">
+            <div className="flex w-full items-center justify-between">
+                <div className="text-[2.5rem] font-semibold">{title}</div>
+                <div className="flex items-center gap-[2rem]">
                     <HiOutlineAdjustmentsHorizontal
                         size={28}
                         color={"#BFBFBF"}
@@ -24,17 +24,8 @@ export default function CourseView({ title }) {
                     <RiFilter2Fill size={28} color={"#BFBFBF"} />
                 </div>
             </div>
-            <div
-                className={`
-                    grid 
-                    gap-x-[10rem] 
-                    gap-y-[6rem] 
-                    py-[3rem]
-                    md:grid-cols-1
-                    lg:grid-cols-2
-                    3xl:grid-cols-3
-            `}
-            >
+
+            <div className="flex flex-wrap justify-center gap-x-[4rem] gap-y-[5.5rem] pt-[4rem]">
                 <CourseCard {...courseCard1} />
                 <CourseCard {...courseCard1} />
                 <CourseCard {...courseCard1} />

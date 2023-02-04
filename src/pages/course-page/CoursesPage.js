@@ -16,7 +16,7 @@ export default function CoursesPage() {
                         <CourseView title={"Current Courses"} />
                     </div>
                     {/* Past Course View */}
-                    <div className="pt-[2rem]">
+                    <div className="pt-[2rem] pb-[10rem]">
                         <CourseView title={"Past Courses"} />
                     </div>
                 </div>
