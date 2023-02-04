@@ -14,14 +14,15 @@ export default function CourseCard({
     return (
         <div
             className={`
+            hover:
             flex
             h-[30rem]
-            w-[45rem]
-            justify-center 
-            rounded-lg 
+            w-[45rem] 
+            cursor-pointer 
+            justify-center
+            rounded-lg
             shadow-md
-            hover:shadow-lg
-            hover:shadow-focus-accent
+            hover:shadow-lg hover:shadow-focus-accent
         `}
         >
             <div>
