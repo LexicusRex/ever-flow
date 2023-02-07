@@ -32,7 +32,6 @@ function Dashboard() {
         <div className="flex h-full">
             {/* <div className="absolute left-[245px]"> */}
             <MenuBar itemFocus={"Dashboard"} />
-            <div className="h-screen min-w-[28rem]"></div>
             <div className="max-w-[170rem] px-[4.5rem]">
                 <div className="flex h-[12.5rem] w-full items-end  px-[2rem]">
                     <div className="flex items-center py-4">

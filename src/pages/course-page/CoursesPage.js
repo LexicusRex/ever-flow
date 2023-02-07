@@ -5,9 +5,8 @@ import PageHeading from "components/PageHeading";
 
 export default function CoursesPage() {
     return (
-        <div className="flex h-screen">
+        <div className="flex h-full">
             <MenuBar itemFocus={"Courses"} />
-            <div className="h-screen min-w-[28rem]" />
             <div className="flex h-full w-full flex-col">
                 <PageHeading pageTitle={"My Courses"} />
                 <div>
