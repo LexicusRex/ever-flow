@@ -12,6 +12,7 @@
 <!-- PROJECT LOGO & DESCRIPTION & IMAGES -->
 <br />
 <div align="center">
+  This should now be called aegile.
   <a href="https://github.com/LexicusRex/ever-flow">
     <img src="images/logo-left.svg" alt="Logo" width="600" height="200">
   </a>
