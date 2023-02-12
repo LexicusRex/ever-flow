@@ -14,6 +14,7 @@ import {
     Dashboard,
     ProjectsPage,
     CoursesPage,
+    Database,
 } from "./pages/index";
 
 import ProtectedRoute from "components/authentication/ProtectedRoute";
@@ -35,6 +36,7 @@ function App() {
 
                     {/* Protected routes */}
                     <Route element={<ProtectedRoute />}>
+                        <Route path="/db" element={<Database />} />
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/courses" element={<CoursesPage />} />
                         <Route path="/projects" element={<ProjectsPage />} />

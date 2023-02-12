@@ -42,9 +42,9 @@ function ProjectsPage() {
         return <ProjectTasksPage {...projectProps} />;
     }
     return (
-        <div className="flex h-screen">
+        <div className="flex h-full">
             <MenuBar itemFocus={pageTitle} />
-            <div className="h-screen min-w-[28rem]"></div>
+            {/* <div className="h-screen min-w-[28rem]"></div> */}
             <div className="flex w-full flex-col">
                 <PageHeading hasMyHeader={true} pageTitle={pageTitle} />
                 <PageOverview overviewTitle={pageTitle} cardList={projects} />

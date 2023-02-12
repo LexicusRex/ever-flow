@@ -17,24 +17,34 @@ export default function CourseCard({
             hover:
             flex
             h-[30rem]
-            w-[45rem] 
+            min-w-[40rem]
+            max-w-[60rem] 
+            grow
             cursor-pointer 
+            flex-col 
+            items-center
             justify-center
             rounded-lg
-            shadow-md
-            hover:shadow-lg hover:shadow-focus-accent
+            text-left
+            shadow-md hover:shadow-lg
+            hover:shadow-focus-accent
         `}
         >
-            <div>
-                <div className="pt-[1rem] pb-[0.4rem]">
-                    <img
-                        src={courseImg}
-                        alt="img"
-                        className="h-[19rem] w-fit px-[1rem]"
-                    />
-                </div>
+            <div className="w-full">
+                <img
+                    src={courseImg}
+                    alt="img"
+                    className="
+                        h-[19rem]
+                        w-full
+                        object-cover
+                        px-[1rem]
+                        pt-[1rem]
+                        pb-[0.4rem]
+                    "
+                />
                 <div className="px-[1rem]">
-                    <div className="text-[2rem] font-semibold">{course}</div>
+                    <div className=" text-[2rem] font-semibold">{course}</div>
                     <div className="pb-[0.3rem] text-[1.4rem] font-medium">
                         {description}
                     </div>
