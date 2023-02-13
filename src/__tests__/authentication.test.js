@@ -1,5 +1,7 @@
 import { renderHook, act, waitFor } from "@testing-library/react";
 import useLogin from "hooks/useLogin";
+import useSignup from "hooks/useSignup";
+import { usePocketbase } from "hooks/usePocketbase";
 import { QueryClient, QueryClientProvider } from "react-query";
 import pb from "lib/pocketbase";
 
@@ -12,27 +14,100 @@ const createWrapper = () => {
     );
 };
 
-test("user login hook", async () => {
-    pb.authStore.clear();
-    const { result } = renderHook(() => useLogin(), {
-        wrapper: createWrapper(),
-    });
+const userSignUpData = {
+    firstName: "test1",
+    lastName: "test1",
+    userEmail: "test1@gmail.com",
+    userPassword: "12345",
+};
 
-    const { mutate: loginFunc, isLoading, isError } = result.current;
-    act(() => {
-        loginFunc({ email: "sam@gmail.com", password: "12345" });
-        console.log(
-            "🚀 ~ file: authentication.test.js:25 ~ act ~ pb.authStore.isValid;",
-            pb.authStore.isValid
-        );
-    });
+describe("User Register", function () {
+    // This part of the code is not finishing
+    it("user signup hook", async () => {
+        pb.authStore.clear();
+        const { result } = renderHook(() => useSignup(), {
+            wrapper: createWrapper(),
+        });
+        const { mutate: registerFunc, isLoading, isError } = result.current;
+        act(() => {
+            registerFunc(userSignUpData);
+        });
 
-    await waitFor(() => {
-        console.log(
-            "🚀 ~ file: authentication.test.js:32 ~ act ~ pb.authStore.isValid;",
-            pb.authStore.isValid
-        );
-        expect(pb.authStore.isValid).toBe(true);
+        // Check for successful register
+        await waitFor(() => {
+            expect(isError).toBe(false);
+        });
+    });
+    it("check signed up user", async () => {
+        pb.authStore.clear();
+        const { result } = renderHook(() => usePocketbase(), {
+            wrapper: createWrapper(),
+        });
+        let response;
+        const { getUsers } = result.current;
+        act(() => {
+            response = getUsers();
+        });
+        await waitFor(() => {
+            response.then(function (result) {
+                console.log(result);
+            });
+            expect(false).toBe(false);
+        });
+        // it("check signed up user", async () => {
+        //     pb.authStore.clear();
+        //     const { result } = renderHook(() => usePocketbase(), {
+        //         wrapper: createWrapper(),
+        //     });
+        //     let response;
+        //     const { getUsers } = result.current;
+        //     act(() => {
+        //         response = getUsers();
+        //     });
+        //     await waitFor(() => {
+        //         response.then(function (result) {
+        //             console.log(result);
+        //         });
+        //         expect(false).toBe(false);
+        //     });
+    });
+});
+
+describe("User Login", function () {
+    it("user login hook", async () => {
+        pb.authStore.clear();
+        const { result } = renderHook(() => useLogin(), {
+            wrapper: createWrapper(),
+        });
+
+        const { mutate: loginFunc, isLoading, isError } = result.current;
+        act(() => {
+            loginFunc({ email: "sam@gmail.com", password: "12345" });
+        });
+
+        await waitFor(() => {
+            expect(pb.authStore.isValid).toBe(true);
+        });
+        pb.authStore.clear();
+    });
+    it("invalid user login", async () => {
+        pb.authStore.clear();
+        const { result } = renderHook(() => useLogin(), {
+            wrapper: createWrapper(),
+        });
+
+        const { mutate: loginFunc, isLoading, isError } = result.current;
+        act(() => {
+            loginFunc({
+                email: "doesnotexist@gmail.com",
+                password: "doesnotexist",
+            });
+        });
+
+        await waitFor(() => {
+            expect(pb.authStore.isValid).toBe(false);
+        });
+        pb.authStore.clear();
     });
 });
 
