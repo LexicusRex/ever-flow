@@ -22,16 +22,12 @@ function ProjectsPage() {
         taskCount: 1,
         meetingCount: 2,
         dueDate: "10/05/2023",
+        setOpenProject: setDisplayProject,
+        setOpenProps: setProjectProps,
     };
 
     const projects = [
-        <ProjectCard
-            key={"a"}
-            progress={20}
-            {...test1}
-            setOpenProject={setDisplayProject}
-            setOpenProps={setProjectProps}
-        />,
+        <ProjectCard key={"a"} progress={20} {...test1} />,
         <ProjectCard key={"b"} progress={30} {...test1} />,
         <ProjectCard key={"c"} progress={40} {...test1} />,
         <ProjectCard key={"d"} progress={50} {...test1} />,
